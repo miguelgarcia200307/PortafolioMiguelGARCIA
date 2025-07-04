@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#6c5ce7">
+    <title>Mi Portafolio | Miguel Garcia</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/desarrollador.png">
+    <link rel="shortcut icon" type="image/png" href="assets/img/desarrollador.png">
+    <link rel="apple-touch-icon" href="assets/img/desarrollador.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/cta-section.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="preload" href="js/main.js" as="script">
+</head>
+<body>
+    <!-- Navegación -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="highlight">Miguel</span>Dev
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link">Inicio</a></li>
+                    <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#portfolio" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-bg-decoration">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+            <div class="hero-particles"></div>
+            <div class="hero-grid-pattern"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <!-- Badge de estado profesional -->
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Disponible para proyectos</span>
+                </div>
+                
+                <!-- Título principal mejorado -->
+                <h1 class="hero-title animate-text">
+                    Hola, soy <span class="highlight">{Miguel Garcia}</span>
+                </h1>
+                
+                <!-- Efecto typewriter mejorado -->
+                <div class="typewriter-container">
+                    <span class="typewriter-prefix">Especialista en</span>
+                    <div class="typewriter">
+                        <span id="typewriter-text"></span>
+                    </div>
+                </div>
+                
+                <!-- Descripción profesional -->
+                <p class="hero-description">
+                    Transformo ideas en experiencias digitales excepcionales, 
+                    combinando diseño moderno con desarrollo técnico avanzado.
+                </p>
+                
+                <!-- Estadísticas rápidas -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Proyectos</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Tecnologías</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfacción</span>
+                    </div>
+                </div>
+                
+                <!-- Botones de acción mejorados -->
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn primary-btn hero-btn-primary">
+                        <span class="btn-text">Ver Proyectos</span>
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="btn-shine"></div>
+                    </a>
+                    <a href="#contact" class="btn secondary-btn hero-btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span class="btn-text">Contáctame</span>
+                    </a>
+                </div>
+                
+                <!-- Enlaces sociales rápidos -->
+                <div class="hero-social">
+                    <span class="social-label">Sígueme en</span>
+                    <div class="social-links">
+                        <a href="https://github.com/miguelg-dev" target="_blank" class="social-link github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/miguelgarcia-dev-740b1b346" target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="profile-container">
+                    <!-- Elementos decorativos mejorados -->
+                    <div class="profile-decoration">
+                        <div class="decoration-ring ring-1"></div>
+                        <div class="decoration-ring ring-2"></div>
+                        <div class="decoration-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen de perfil con efectos -->
+                    <div class="profile-image-wrapper">
+                        <img src="assets/img/Miguel.jpeg" alt="Miguel Garcia - Desarrollador Web" class="profile-pic">
+                        <div class="profile-glow"></div>
+                    </div>
+                    
+                    <!-- Formas decorativas mejoradas -->
+                    <div class="shape shape1"></div>
+                    <div class="shape shape2"></div>
+                    <div class="shape shape3"></div>
+                    
+                    <!-- Elementos flotantes de tecnologías -->
+                    <div class="floating-tech">
+                        <div class="tech-bubble tech-1">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-bubble tech-2">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="tech-bubble tech-3">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="tech-bubble tech-4">
+                            <i class="fab fa-java"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator mejorado -->
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-link">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span class="scroll-text">Conoce más</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sobre mí con efectos premium -->
+    <section id="about" data-aos="fade-up" data-aos-duration="1000">
+        <div class="section-header">
+            <span class="section-subtitle">Conóceme</span>
+            <h2 class="section-title">Sobre <span class="highlight">Mí</span></h2>
+        </div>
+        
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-right">
+                <img src="assets/img/Miguel2.png" alt="Sobre Mí">
+                <div class="experience-badge">
+                    <span class="number">3+</span>
+                    <span class="text">Años de<br>Experiencia</span>
+                </div>
+            </div>
+            
+            <div class="about-content" data-aos="fade-left">
+                <h3>Desarrollador Web Creativo y Apasionado</h3>
+                <p>Soy estudiante de Ingeniería de Sistemas en sexto semestre  con interés en el desarrollo de software. En mis primeros años de carrera, he trabajado en diversos proyectos, incluyendo una página web con la que gané una hackatón organizada por Talentotech. Tengo conocimientos en Python, C++, Java, JavaScript, CSS y HTML, y me encuentro en el quinto semestre de mi carrera.Mi objetivo profesional es especializarme en Full Stack Development, combinando habilidades en frontend y backend para crear aplicaciones funcionales. Además, he obtenido varios certificados que respaldan mis conocimientos en el área.Soy una persona dedicada al aprendizaje continuo, con interés en aplicar nuevas tecnologías para resolver problemas de manera eficiente.</p>
+                
+                <div class="about-info">
+                    <div class="info-item">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <h4>Experiencia práctica</h4>
+                            <p>+3 años en desarrollo web</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h4>Educación</h4>
+                            <p>Ingeniería en Sistemas Computacionales</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-language"></i>
+                        <div>
+                            <h4>Idiomas</h4>
+                            <p>Español (nativo), Inglés (Basico)</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <div>
+                            <h4>Disponibilidad</h4>
+                            <p>Freelance, Tiempo Completo, Proyectos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-facts">
+                    <div class="fact">
+                        <span class="counter" data-target="10">10</span>
+                        <p>Proyectos Completados</p>
+                    </div>
+                    <div class="fact">
+                        <span class="counter" data-target="10">10</span>
+                        <p>Clientes Satisfechos</p>
+                    </div>
+                    <div class="fact">
+                        <span class="counter" data-target="3">3
+                            
+                        </span>
+                        <p>Premios Recibidos</p>
+                    </div>
+                </div>
+                
+                <div class="about-skills-grid">
+                    <span class="skill-tag"><i class="fas fa-check-circle"></i> Diseño Web</span>
+                    <span class="skill-tag"><i class="fas fa-check-circle"></i> Desarrollo Frontend</span>
+                    <span class="skill-tag"><i class="fas fa-check-circle"></i> Desarrollo Backend</span>
+                    <span class="skill-tag"><i class="fas fa-check-circle"></i> Responsive Design</span>
+                    <span class="skill-tag"><i class="fas fa-check-circle"></i> UI/UX</span>
+                    <span class="skill-tag"><i class="fas fa-check-circle"></i> E-commerce</span>
+                </div>
+                
+                
+                    
+
+                
+                <div class="cv-actions">
+                    <a href="#" class="btn primary-btn cv-button" onclick="openCVModal()">
+                        <i class="fas fa-eye"></i> Ver CV
+                    </a>
+                    <a href="assets/pdf/cv1.pdf" class="btn secondary-btn cv-download-button" download="CV_Miguel_Garcia.pdf" target="_blank" title="Descarga directa">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades con diseño profesional armonizado -->
+    <section id="skills" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Elementos de fondo decorativos -->
+        <div class="skills-bg-shape skills-bg-circle"></div>
+        <div class="skills-bg-shape skills-bg-dots"></div>
+
+        <div class="section-header">
+            <span class="section-subtitle">Mis especialidades</span>
+            <h2 class="section-title">Mis <span class="highlight">Habilidades</span></h2>
+        </div>
+        
+        <div class="skills-container">
+            <!-- Frontend Technologies -->
+            <div class="skills-category" data-aos="fade-right">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Creando interfaces modernas y responsivas</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>HTML5</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>CSS3</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>JavaScript</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>React</h4>
+                            <span class="skill-level advanced">Intermedio</span>
+                        </div>
+                    </div>
+                    
+                   
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-bootstrap"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Bootstrap</h4>
+                            <span class="skill-level basic">Basico </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Backend Technologies -->
+            <div class="skills-category" data-aos="fade-left">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Construyendo APIs robustas y escalables</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Node.js</h4>
+                            <span class="skill-level basic">Basico </span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Python</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Java</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>MySQL</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>SQL Server </h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Postgres</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Git</h4>
+                            <span class="skill-level intermediate">Intermedio</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>REST APIs</h4>
+                            <span class="skill-level intermediate">Intermedio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools & Other Skills -->
+            <div class="skills-category full-width" data-aos="fade-up">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Herramientas & Otras Habilidades</h3>
+                    <p>Tecnologías adicionales que manejo</p>
+                </div>
+                
+                <div class="skills-grid tools-grid">
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-figma"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Figma</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>GitHub</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Responsive Design</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>SEO</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>UI/UX Design</h4>
+                            <span class="skill-level intermediate">Intermedio</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-logo">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Performance</h4>
+                            <span class="skill-level expert">Avanzado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-icons" data-aos="fade-up" data-aos-delay="200">
+            <div class="tech-icon html5">
+                <i class="fab fa-html5" style="color: #E44D26;"></i>
+                <span class="tech-tooltip">HTML5</span>
+            </div>
+            <div class="tech-icon css3">
+                <i class="fab fa-css3-alt" style="color: #264DE4;"></i>
+                <span class="tech-tooltip">CSS3</span>
+            </div>
+            <div class="tech-icon js">
+                <i class="fab fa-js-square" style="color: #F7DF1E;"></i>
+                <span class="tech-tooltip">JavaScript</span>
+            </div>
+            <div class="tech-icon react">
+                <i class="fab fa-react" style="color: #61DAFB;"></i>
+                <span class="tech-tooltip">React</span>
+            </div>
+            <div class="tech-icon node">
+                <i class="fab fa-node" style="color: #68A063;"></i>
+                <span class="tech-tooltip">Node.js</span>
+            </div>
+            <div class="tech-icon git">
+                <i class="fab fa-git-alt" style="color: #F05032;"></i>
+                <span class="tech-tooltip">Git</span>
+            </div>
+        </div>
+        
+        <!-- Certificaciones mejoradas con diseño premium -->
+        <div class="skills-certifications" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="certifications-title"><span>Certificaciones</span> y Educación Técnica</h3>                <div class="certification-container">
+                <!-- Certificado Java Oracle -->
+                <div class="certification-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fab fa-java"></i>
+                            <div class="certification-glow"></div>
+                        </div>
+                        <div class="certification-badge">2024</div>
+                        <div class="certification-content">
+                            <h4>Curso: JAVA FUNDAMENTAL</h4>
+                            <div class="certification-provider">
+                                <img src="assets/img/oracle.jpg" alt="ORACLE ACADEMY LOGO">
+                                <span>ORACLE ACADEMY</span>
+                            </div>
+                            <p>Certificación oficial de Oracle en Java Fundamental, enfocada en Programación Orientada a Objetos. Ideal para iniciar tu carrera como desarrollador con una base sólida y reconocida a nivel internacional.</p>
+                            <div class="certification-meta">
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2024</span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                            </div>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/JAVA.png">Ver certificado <i class="fas fa-certificate"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificado Talento Tech -->
+                <div class="certification-item" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="certification-glow"></div>
+                        </div>
+                        <div class="certification-badge">2024</div>
+                        <div class="certification-content">
+                            <h4>Curso: PROGRAMACIÓN BÁSICO</h4>
+                            <div class="certification-provider">
+                                <img src="assets/certificates/tech.jpg" alt="TALENTO TECH LOGO">
+                                <span>Talento Tech</span>
+                            </div>
+                            <p>Certificación en programación básica proporcionada por Talento Tech. Fundamentos sólidos de programación, lógica computacional y primeros pasos en desarrollo de software.</p>
+                            <div class="certification-meta">
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2024</span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                            </div>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/Certificado-talento.jpg">Ver certificado <i class="fas fa-certificate"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certification-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-database"></i>
+                            <div class="certification-glow"></div>
+                        </div>
+                        <div class="certification-badge">2024</div>
+                        <div class="certification-content">
+                            <h4>SQL & Databases</h4>
+                            <div class="certification-provider">
+                                <img src="assets/img/coursera-logo.png" alt="Coursera">
+                                <span>Coursera</span>
+                            </div>
+                            <p>Especialización en diseño de bases de datos relacionales y SQL avanzado.</p>
+                            <div class="certification-meta">
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Diciembre 2023</span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> Credencial: SQL-2023-5678</span>
+                            </div>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/tech.jpg">Ver certificado <i class="fas fa-certificate"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certification-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fab fa-html5"></i>
+                            <div class="certification-glow"></div>
+                        </div>
+                        <div class="certification-badge">2022</div>
+                        <div class="certification-content">
+                            <h4>HTML Desde Cего</h4>
+                            <div class="certification-provider">
+                                <img src="assets/img/edteam.png" alt="EDteam">
+                                <span>EDteam</span>
+                            </div>
+                            <p>Certificación en HTML desde Cero por EDteam: Formación completa y práctica para dominar la estructura de páginas web.</p>
+                            <div class="certification-meta">
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2022</span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                            </div>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/certificado-ruta-html-2020.png">Ver certificado <i class="fas fa-certificate"></i></a>
+                        </div>
+                    </div>
+            
+                </div>
+                <div class="certification-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fab fa-python"></i>
+                            <div class="certification-glow"></div>
+                        </div>
+                        <div class="certification-badge">2024</div>
+                        <div class="certification-content">
+                            <h4>Python desde ceroо 2023
+</h4>
+                            <div class="certification-provider">
+                                <img src="assets/img/edteam.png" alt="EDteam">
+                                <span>EDteam</span>
+                            </div>
+                            <p>Certificación en Python desde Cero 2023: Aprende a programar con uno de los lenguajes más demandados del mundo. Curso práctico y actualizado.</p>
+                            <div class="certification-meta">
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2024</span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                            </div>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/certificado-ruta-python.png">Ver certificado <i class="fas fa-certificate"></i></a>
+                        </div>
+
+                        
+                    </div>
+
+                    
+            </div>
+            <div class="certification-item" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fab fa-js-square"></i>
+                            <div class="certification-glow"></div>
+                        </div>
+                        <div class="certification-badge">2024</div>
+                        <div class="certification-content">
+                            <h4>JavaScript desde cего
+</h4>
+                            <div class="certification-provider">
+                                <img src="assets/img/edteam.png" alt="EDteam">
+                                <span>EDteam</span>
+                            </div>
+                            <p>Certificación en JavaScript desde Cero: Domina el lenguaje clave del desarrollo web. Aprende de forma práctica a crear sitios interactivos.</p>
+                            <div class="certification-meta">
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2024</span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                            </div>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/certificado-ruta-javascript.png">Ver certificado <i class="fas fa-certificate"></i></a>
+                        </div>
+                    </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section: Diseño Premium y Profesional -->
+    <section id="portfolio" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Elementos decorativos de fondo -->
+        <div class="portfolio-bg-shape portfolio-bg-circle"></div>
+        <div class="portfolio-bg-shape portfolio-bg-dots"></div>
+        
+        <div class="section-header">
+            <span class="section-subtitle">Trabajos seleccionados</span>
+            <h2 class="section-title">Mi <span class="highlight">Portafolio</span></h2>
+        </div>
+        
+        <!-- Grid de proyectos con diseño avanzado -->
+        <div class="portfolio-grid" data-aos="fade-up" data-aos-delay="300">
+            <!-- Proyecto 1 -->
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumbnail">
+                        <img src="assets/proyectos/NOMINA3.png" alt="Proyecto SVFUPC">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-category">Desarrollo Web</span>
+                                <div class="portfolio-actions">
+                                    <a href="javascript:void(0)" class="portfolio-action live-demo" onclick="openProjectModal('svfupc')">
+                                        <i class="fas fa-images"></i>
+                                        <span class="action-tooltip">Ver Más</span>
+                                    </a>
+                                    <a href="https://github.com/JhonJ-G/NominaUPC.git" class="portfolio-action github" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span class="action-tooltip">Código</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-badge">Destacado</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">SVFUPC-SIMULADOR DE VIABILIDAD FINANCIERA PARA UNIVERSIDADES PUBLICAS DE COLOMBIA </h3>
+                        <p class="portfolio-description">Este proyecto tiene como objetivo crear una aplicación web que simule el cálculo de la nómina de docentes universitarios; tanto de planta, como ocasionales, según el Decreto 1279 de 2002 y el Acuerdo 006 de 2018</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            
+                        </div>
+                        <div class="portfolio-footer">
+                            <a href="https://jhonj-g.github.io/NominaU/" class="portfolio-link" target="_blank">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proyecto 2 -->
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumbnail">
+                        <img src="assets/proyectos/DOMIBOT1.png" alt="Aplicación de Productividad">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-category">Programa de Escritorio</span>
+                                <div class="portfolio-actions">
+                                    <a href="javascript:void(0)" class="portfolio-action live-demo" onclick="openProjectModal('taskmanager')">
+                                        <i class="fas fa-images"></i>
+                                        <span class="action-tooltip">Ver Más</span>
+                                    </a>
+                                    <a href="#" class="portfolio-action github">
+                                        <i class="fab fa-github"></i>
+                                        <span class="action-tooltip">Código</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">DomiBot: Tu Asistente
+ Virtual para Pedidos y 
+Reservas en Restaurantes</h3>
+                        <p class="portfolio-description">Aplicativo de escritorio para restaurantes que automatiza la atención al cliente mediante un asistente virtual de Telegram. Integra módulos para gestionar pedidos, reservas con seguro, promociones, pagos y configuración dinámica del menú. Permite al restaurante definir sus métodos de pago y verificar transferencias desde una única interfaz centralizada y fácil de usar.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET Framework</span>
+                            <span class="tech-tag">Telegram.Bot (librería)</span>
+                            <span class="tech-tag">SQL Server</span>
+                        </div>
+                        <div class="portfolio-footer">
+                            <a href="#" class="portfolio-link">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Proyecto 3 -->
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumbnail">
+                        <img src="assets/proyectos/PORTAFOLIO.png" alt="Dashboard Analytics">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <span class="project-category">Desarrollo Web</span>
+                                <div class="portfolio-actions">
+                                    <a href="javascript:void(0)" class="portfolio-action live-demo" onclick="openProjectModal('dashboard')">
+                                        <i class="fas fa-images"></i>
+                                        <span class="action-tooltip">Ver Más</span>
+                                    </a>
+                                    <a href="#" class="portfolio-action github">
+                                        <i class="fab fa-github"></i>
+                                        <span class="action-tooltip">Código</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Mi Portafolio WEB </h3>
+                        <p class="portfolio-description">Sitio web desarrollado desde cero para mostrar mis proyectos, habilidades y experiencia como desarrollador. Implementado con HTML, CSS y JavaScript, con diseño responsivo y enfoque en rendimiento, accesibilidad y presentación profesional. Funciona como una carta de presentación interactiva.
+
+</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="portfolio-footer">
+                            <a href="#" class="portfolio-link">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección CTA - ¿Tienes un proyecto en mente? -->
+    <section id="project-cta" class="project-cta-section" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Elementos decorativos de fondo -->
+        <div class="cta-bg-decoration">
+            <div class="cta-shape cta-shape-1"></div>
+            <div class="cta-shape cta-shape-2"></div>
+            <div class="cta-particles"></div>
+        </div>
+        
+        <div class="cta-container">
+            <!-- CTA para proyectos personalizados - Diseño premium mejorado -->
+            <div class="portfolio-cta" data-aos="zoom-in" data-aos-delay="200">
+                <div class="cta-content">
+                    <div class="cta-icon-wrapper">
+                        <div class="cta-icon">
+                            <i class="fas fa-rocket"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-text-content">
+                        <span class="cta-badge">
+                            <i class="fas fa-star"></i>
+                            Disponible para nuevos proyectos
+                        </span>
+                        <h3 class="cta-title">
+                            ¿Tienes un <span class="highlight">proyecto</span> en mente?
+                        </h3>
+                        <p class="cta-description">
+                            Estoy disponible para proyectos freelance y colaboraciones. 
+                            Convirtamos tu idea en una realidad digital excepcional.
+                        </p>
+                        
+                        <div class="cta-features">
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Desarrollo personalizado</span>
+                            </div>
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Diseño moderno y responsivo</span>
+                            </div>
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Entrega rápida y eficiente</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-actions">
+                            <a href="#contact" class="btn primary-btn cta-main-btn">
+                                <span class="btn-text">Contáctame</span>
+                                <i class="fas fa-paper-plane"></i>
+                                <div class="btn-glow"></div>
+                            </a>
+                            
+                            <a href="https://wa.me/573117312426?text=Hola%20Miguel,%20estoy%20interesado%20en%20tus%20servicios%20de%20desarrollo.%20Me%20gustaría%20conversar%20sobre%20mi%20proyecto." target="_blank" class="btn secondary-btn cta-whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                        
+                        <div class="cta-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Proyectos completados</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Clientes satisfechos</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-number">2h</span>
+                                <span class="stat-label">Tiempo de respuesta</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-visual">
+                    <div class="cta-image-container">
+                        <div class="floating-elements">
+                            <div class="floating-element element-1">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="floating-element element-2">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="floating-element element-3">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="floating-element element-4">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="floating-element element-5">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="floating-element element-6">
+                                <i class="fab fa-java"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-main-visual">
+                            <div class="visual-circle circle-1"></div>
+                            <div class="visual-circle circle-2"></div>
+                            <div class="visual-circle circle-3"></div>
+                            <div class="central-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para mostrar más imágenes del proyecto -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeProjectModal(); return false;">&times;</span>
+            <div class="modal-header">
+                <h3 id="modal-project-title">Título del Proyecto</h3>
+                <p id="modal-project-category">Categoría</p>
+            </div>
+            <div class="modal-gallery">
+                <div class="main-image-container">
+                    <img id="modal-main-image" src="" alt="Imagen principal del proyecto">
+                    <div class="image-counter">
+                        <span id="current-image">1</span> / <span id="total-images">1</span>
+                    </div>
+                    <button class="image-nav-btn prev-btn" onclick="navigateImage(-1)" aria-label="Imagen anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="image-nav-btn next-btn" onclick="navigateImage(1)" aria-label="Siguiente imagen">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="thumbnail-gallery">
+                    <div id="modal-thumbnails" class="thumbnails-container">
+                        <!-- Las miniaturas se cargarán dinámicamente aquí -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-description">
+                <p id="modal-project-description">Descripción del proyecto</p>
+                <div id="modal-project-tech" class="modal-tech-tags">
+                    <!-- Las tecnologías se cargarán aquí -->
+                </div>
+                <div class="modal-actions">
+                    <a id="modal-github-link" href="#" class="btn secondary-btn" target="_blank">
+                        <i class="fab fa-github"></i> Ver Código
+                    </a>
+                    <a id="modal-demo-link" href="#" class="btn primary-btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Ver Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop" onclick="closeProjectModal()"></div>
+    </div>
+
+    <!-- Sección de Contacto Premium -->
+    <section id="contact" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Elementos decorativos de fondo -->
+        <div class="contact-bg-shape contact-bg-circle"></div>
+        <div class="contact-bg-shape contact-bg-dots"></div>
+        
+        <div class="section-header">
+            <span class="section-subtitle">Ponte en contacto</span>
+            <h2 class="section-title">Contác<span class="highlight">tame</span></h2>
+        </div>
+        
+        <div class="contact-container">
+            <!-- Información de contacto con diseño mejorado -->
+            <div class="contact-info-wrapper" data-aos="fade-right" data-aos-delay="100">
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <h3>Información de Contacto</h3>
+                        <p>Estoy disponible para nuevos proyectos. Contáctame y conversemos sobre tu idea.</p>
+                    </div>
+                    
+                    <div class="contact-info-items">
+                        <div class="contact-info-item">
+                            <div class="info-icon-container">
+                                <i class="fas fa-envelope"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>devmiguelgarcia@gmail.com</p>
+                                <a href="mailto:devmiguelgarcia@gmail.com" class="mail-link">Enviar email <i class="fas fa-paper-plane"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="info-icon-container">
+                                <i class="fas fa-phone-alt"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div class="info-content">
+                                <h4>WhatsApp</h4>
+                                <p>+57 311 731 2426</p>
+                                <a href="https://wa.me/573117312426" class="phone-link" target="_blank">Contactar <i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="info-icon-container">
+                                <i class="far fa-clock"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div class="info-content">
+                                <h4>Disponibilidad</h4>
+                                <p>Tiempo Completo</p>
+                                <span class="availability-status">
+                                    <span class="status-dot available"></span>
+                                    Disponible para proyectos
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Sígueme en</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/miguelgarcia-dev-740b1b346" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span class="social-tooltip">LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/miguelg-dev" target="_blank" class="social-btn github" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span class="social-tooltip">GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cta">
+                        <span class="cta-text">¿Listo para empezar tu proyecto?</span>
+                        <a href="https://wa.me/573117312426?text=Hola%20Miguel,%20estoy%20interesado%20en%20tus%20servicios%20de%20desarrollo.%20Me%20gustaría%20conversar%20sobre%20mi%20proyecto." target="_blank" class="btn primary-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contacto directo con WhatsApp -->
+            <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="200">
+                <div class="contact-form-card whatsapp-card">
+                    <div class="whatsapp-header">
+                        <div class="whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>Contacto Directo</h3>
+                        <p>¡Conversemos sobre tu proyecto! Envíame un mensaje y te responderé inmediatamente.</p>
+                    </div>
+                    
+                    <div class="whatsapp-content">
+                        <div class="whatsapp-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>Respuesta inmediata</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-comments"></i>
+                                <span>Conversación fluida</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Desde cualquier dispositivo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="whatsapp-cta-section">
+                            <div class="whatsapp-preview">
+                                <div class="message-preview">
+                                    <div class="preview-header">
+                                        <div class="avatar">MG</div>
+                                    </div>
+                                    <div class="preview-message">
+                                        ¡Hola! 👋 Gracias por contactarme. Cuéntame sobre tu proyecto y trabajemos juntos para hacerlo realidad.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a href="https://wa.me/573117312426?text=Hola%20Miguel,%20estoy%20interesado%20en%20tus%20servicios%20de%20desarrollo.%20Me%20gustaría%20conversar%20sobre%20mi%20proyecto." target="_blank" class="btn primary-btn whatsapp-main-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Abrir WhatsApp</span>
+                                <div class="btn-shine"></div>
+                            </a>
+                            
+                            <div class="alternative-contact">
+                                <span>O también puedes:</span>
+                                <div class="alternative-buttons">
+                                    <a href="mailto:devmiguelgarcia@gmail.com" class="alt-btn">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                    <a href="tel:+573117312426" class="alt-btn">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-features">
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Respuesta inmediata</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Comunicación segura</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                        <span>Atención personalizada</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lock"></i>
+                        <span>Conexión segura</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ sección con acordeón -->
+        <div class="contact-faq-container" data-aos="fade-up" data-aos-delay="400">
+            <div class="faq-header">
+                <h3>Preguntas Frecuentes</h3>
+                <p>Algunas respuestas que podrían ser útiles</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>¿Cómo es tu proceso de trabajo?</h4>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Mi proceso comienza con una reunión inicial para entender tus necesidades, seguido de una propuesta detallada. Trabajo con metodologías ágiles, entregando avances periódicos y manteniendo comunicación constante durante todo el proyecto.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>¿Cuáles son tus tarifas?</h4>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Mis tarifas varían según el tipo y alcance del proyecto. Puedo trabajar con presupuestos por proyecto o por hora, adaptándome a tus necesidades. Contáctame para recibir una cotización personalizada.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>¿Cuál es tu tiempo de entrega promedio?</h4>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Los tiempos de entrega dependen de la complejidad del proyecto. Un sitio web básico puede estar listo en 2-3 semanas, mientras que proyectos más complejos pueden tomar entre 1-3 meses. Siempre acordamos un cronograma realista al inicio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Premium Mejorado -->
+    <footer>
+        <!-- Elementos decorativos de fondo -->
+        <div class="footer-bg-decoration">
+            <div class="footer-shape footer-shape-1"></div>
+            <div class="footer-shape footer-shape-2"></div>
+            <div class="footer-particles"></div>
+        </div>
+        
+        <div class="footer-content">
+            <!-- Header del footer con logo y descripción -->
+            <div class="footer-header">
+                <div class="footer-logo">
+                    <span class="highlight">Miguel</span>Dev
+                </div>
+                <p class="footer-tagline">
+                    Transformando ideas en experiencias digitales excepcionales
+                </p>
+                <div class="footer-social-main">
+                    <a href="https://github.com/miguelg-dev" target="_blank" class="social-btn github" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="social-tooltip">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/miguelgarcia-dev-740b1b346" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span class="social-tooltip">LinkedIn</span>
+                    </a>
+                    <a href="https://wa.me/573117312426" target="_blank" class="social-btn whatsapp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="social-tooltip">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Contenido principal del footer -->
+            <div class="footer-main">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4><i class="fas fa-link"></i> Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="#home"><i class="fas fa-home"></i> Inicio</a></li>
+                            <li><a href="#about"><i class="fas fa-user"></i> Sobre Mí</a></li>
+                            <li><a href="#skills"><i class="fas fa-code"></i> Habilidades</a></li>
+                            <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Proyectos</a></li>
+                            <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4><i class="fas fa-cogs"></i> Servicios</h4>
+                        <ul>
+                            <li><i class="fas fa-laptop-code"></i> Desarrollo Web</li>
+                            <li><i class="fas fa-mobile-alt"></i> Aplicaciones Móviles</li>
+                            <li><i class="fas fa-paint-brush"></i> Diseño UI/UX</li>
+                            <li><i class="fas fa-server"></i> Backend Development</li>
+                            <li><i class="fas fa-search"></i> SEO & Optimización</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4><i class="fas fa-address-card"></i> Contacto</h4>
+                        <div class="footer-contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:devmiguelgarcia@gmail.com">devmiguelgarcia@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span class="contact-label">Teléfono</span>
+                                    <a href="tel:+573117312426">+57 311 731 2426</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="contact-label">Ubicación</span>
+                                    <span>Colombia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer bottom con copyright y extras -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 <span class="highlight">Miguel Garcia</span>. Todos los derechos reservados.</p>
+                    <p class="footer-made-with">
+                        Hecho con <i class="fas fa-heart"></i> usando HTML, CSS & JavaScript
+                    </p>
+                </div>
+                
+                <div class="footer-extra-links">
+                    <a href="#" class="footer-extra-link">Política de Privacidad</a>
+                    <span class="divider">•</span>
+                    <a href="#" class="footer-extra-link">Términos de Uso</a>
+                    <span class="divider">•</span>
+                    <a href="#" class="footer-extra-link">Cookies</a>
+                </div>
+                
+                <div class="footer-status">
+                    <span class="status-indicator">
+                        <span class="status-dot available"></span>
+                        Disponible para proyectos
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botón de subir mejorado -->
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+            <div class="back-to-top-glow"></div>
+        </a>
+    </footer>
+
+    <!-- Modal para mostrar certificados -->
+    <div id="certificateModal" class="certificate-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-image-container">
+                <img id="certificateImage" src="" alt="Certificado">
+                <div class="modal-controls">
+                    <button id="downloadCertificate" class="modal-btn download-btn">
+                        <i class="fas fa-download"></i> Descargar
+                    </button>
+                    <button id="fullscreenCertificate" class="modal-btn fullscreen-btn">
+                        <i class="fas fa-expand"></i> Pantalla completa
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop"></div>
+    </div>
+
+    <!-- Modal para mostrar CV con vista previa -->
+    <div id="cvModal" class="cv-modal">
+        <div class="cv-modal-content">
+            <div class="cv-modal-header">
+                <h3>Currículum Vitae - Miguel Garcia</h3>
+                <div class="cv-modal-controls">
+                    <button onclick="downloadCV()" class="cv-btn download-btn" title="Descargar CV">
+                        <i class="fas fa-download"></i>
+                        <span class="btn-text">Descargar</span>
+                    </button>
+                    <button onclick="openCVFullscreen()" class="cv-btn fullscreen-btn" title="Ver en pantalla completa">
+                        <i class="fas fa-expand"></i>
+                        <span class="btn-text">Pantalla completa</span>
+                    </button>
+                    <button onclick="closeCVModal()" class="cv-btn close-btn" title="Cerrar">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="cv-preview-container">
+                <div class="cv-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Cargando CV...</p>
+                </div>
+                <iframe id="cvPreview" 
+                        src="" 
+                        title="Vista previa del CV"
+                        allowfullscreen>
+                </iframe>
+                <div class="cv-fallback">
+                    <div class="fallback-content">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>Vista previa no disponible</h4>
+                        <p>Tu navegador no soporta la vista previa de PDF. Puedes descargar el archivo directamente.</p>
+                        <button onclick="downloadCV()" class="btn primary-btn">
+                            <i class="fas fa-download"></i> Descargar CV
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cv-mobile-actions">
+                <button onclick="downloadCV()" class="cv-mobile-btn download">
+                    <i class="fas fa-download"></i>
+                    <span>Descargar</span>
+                </button>
+                <button onclick="openCVFullscreen()" class="cv-mobile-btn fullscreen">
+                    <i class="fas fa-expand"></i>
+                    <span>Pantalla completa</span>
+                </button>
+            </div>
+        </div>
+        <div class="cv-modal-backdrop" onclick="closeCVModal()"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/cta-section.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/cv-modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+</body>
+</html>
