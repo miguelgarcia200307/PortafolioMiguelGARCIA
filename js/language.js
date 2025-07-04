@@ -142,8 +142,9 @@ class LanguageSystem {
                 modal_cv_title: "Currículum Vitae - Miguel Garcia",
                 modal_loading: "Cargando CV...",
                 modal_preview_not_available: "Vista previa no disponible",
-                modal_browser_not_support: "Tu navegador no soporta la vista previa de PDF. Puedes descargar el archivo directamente.",
+                modal_browser_not_support: "Tu navegador no soporta la vista previa de PDF. Puedes descargar el archivo directamente o abrirlo en una nueva pestaña.",
                 modal_download_cv: "Descargar CV",
+                modal_open_new_tab: "Abrir en nueva pestaña",
                 
                 // Project data
                 project_svfupc_title: "SVFUPC - Simulador de Viabilidad Financiera",
@@ -349,13 +350,14 @@ class LanguageSystem {
                 
                 // Modal texts
                 modal_download: "Download",
-                modal_fullscreen: "Full screen",
+                modal_fullscreen: "Fullscreen",
                 modal_close: "Close",
                 modal_cv_title: "Resume - Miguel Garcia",
                 modal_loading: "Loading CV...",
                 modal_preview_not_available: "Preview not available",
-                modal_browser_not_support: "Your browser does not support PDF preview. You can download the file directly.",
+                modal_browser_not_support: "Your browser doesn't support PDF preview. You can download the file directly or open it in a new tab.",
                 modal_download_cv: "Download CV",
+                modal_open_new_tab: "Open in new tab",
                 
                 // Project data
                 project_svfupc_title: "SVFUPC - Financial Viability Simulator",
@@ -566,8 +568,9 @@ class LanguageSystem {
                 modal_cv_title: "Currículo - Miguel Garcia",
                 modal_loading: "Carregando CV...",
                 modal_preview_not_available: "Visualização não disponível",
-                modal_browser_not_support: "Seu navegador não suporta visualização de PDF. Você pode baixar o arquivo diretamente.",
+                modal_browser_not_support: "Seu navegador não suporta visualização de PDF. Você pode baixar o arquivo diretamente ou abri-lo em uma nova aba.",
                 modal_download_cv: "Baixar CV",
+                modal_open_new_tab: "Abrir em nova aba",
                 
                 // Project data
                 project_svfupc_title: "SVFUPC - Simulador de Viabilidade Financeira",

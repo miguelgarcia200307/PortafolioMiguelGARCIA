@@ -232,7 +232,7 @@
             
             <div class="about-content" data-aos="fade-left">
                 <h3 data-i18n="about_main_title">Desarrollador Web Creativo y Apasionado</h3>
-                <p data-i18n="about_description">Soy estudiante de Ingeniería de Sistemas en sexto semestre con interés en el desarrollo de software. En mis primeros años de carrera, he trabajado en diversos proyectos, incluyendo una página web con la que gané una hackatón organizada por Talentotech. Tengo conocimientos en Python, C++, Java, JavaScript, CSS y HTML, y me encuentro en el quinto semestre de mi carrera.Mi objetivo profesional es especializarme en Full Stack Development, combinando habilidades en frontend y backend para crear aplicaciones funcionales. Además, he obtenido varios certificados que respaldan mis conocimientos en el área.Soy una persona dedicada al aprendizaje continuo, con interés en aplicar nuevas tecnologías para resolver problemas de manera eficiente.</p>
+                <p data-i18n="about_description">Soy estudiante de Ingeniería de Sistemas en sexto semestre con interés en el desarrollo de software. En mis primeros años de carrera, he trabajado en diversos proyectos, incluyendo una página web con la que gané una hackatón organizada por Talentotech. Tengo conocimientos en Python, C++, Java, JavaScript, CSS y HTML. Mi objetivo profesional es especializarme en Full Stack Development, combinando habilidades en frontend y backend para crear aplicaciones funcionales. Además, he obtenido varios certificados que respaldan mis conocimientos en el área.Soy una persona dedicada al aprendizaje continuo, con interés en aplicar nuevas tecnologías para resolver problemas de manera eficiente.</p>
                 
                 <div class="about-info">
                     <div class="info-item">
@@ -294,9 +294,9 @@
 
                 
                 <div class="cv-actions">
-                    <a href="#" class="btn primary-btn cv-button" onclick="openCVModal()">
+                    <button onclick="openCVModal(); return false;" class="btn primary-btn cv-button">
                         <i class="fas fa-eye"></i> <span data-i18n="about_cv_view">Ver CV</span>
-                    </a>
+                    </button>
                     <a href="assets/pdf/cv-miguelgarciadev.pdf" class="btn secondary-btn cv-download-button" download="CV_Miguel_Garcia.pdf" target="_blank" title="Descarga directa">
                         <i class="fas fa-download"></i>
                     </a>
@@ -1398,10 +1398,15 @@
                     <div class="fallback-content">
                         <i class="fas fa-file-pdf"></i>
                         <h4 data-i18n="modal_preview_not_available">Vista previa no disponible</h4>
-                        <p data-i18n="modal_browser_not_support">Tu navegador no soporta la vista previa de PDF. Puedes descargar el archivo directamente.</p>
-                        <button onclick="downloadCV()" class="btn primary-btn">
-                            <i class="fas fa-download"></i> <span data-i18n="modal_download_cv">Descargar CV</span>
-                        </button>
+                        <p data-i18n="modal_browser_not_support">Tu navegador no soporta la vista previa de PDF. Puedes descargar el archivo directamente o abrirlo en una nueva pestaña.</p>
+                        <div class="fallback-actions">
+                            <button onclick="downloadCV()" class="btn primary-btn">
+                                <i class="fas fa-download"></i> <span data-i18n="modal_download_cv">Descargar CV</span>
+                            </button>
+                            <button onclick="openCVFullscreen()" class="btn secondary-btn">
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="modal_open_new_tab">Abrir en nueva pestaña</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
