@@ -1,0 +1,640 @@
+/* ========================================
+   CTA SECTION - ¿Tienes un proyecto en mente?
+   Archivo dedicado para evitar conflictos
+   ======================================== */
+
+/* Sección principal del CTA */
+.project-cta-section {
+    position: relative;
+    padding: 120px 0;
+    background: linear-gradient(135deg, 
+        rgba(108, 92, 231, 0.05) 0%, 
+        rgba(72, 52, 212, 0.03) 50%, 
+        rgba(255, 255, 255, 0.08) 100%);
+    overflow: hidden;
+}
+
+/* Elementos decorativos de fondo */
+.cta-bg-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(72, 52, 212, 0.05));
+    animation: ctaFloat 8s ease-in-out infinite;
+}
+
+.cta-shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    right: -50px;
+    animation-delay: 0s;
+}
+
+.cta-shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    left: -30px;
+    animation-delay: 2s;
+}
+
+.cta-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(108, 92, 231, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, rgba(72, 52, 212, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px, 80px 80px;
+    animation: ctaParticleMove 20s linear infinite;
+}
+
+/* Container principal */
+.cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Card principal del CTA */
+.portfolio-cta {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 80px 60px;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.08),
+        0 20px 40px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: center;
+}
+
+.portfolio-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(108, 92, 231, 0.02) 0%, 
+        rgba(72, 52, 212, 0.01) 100%);
+    z-index: -1;
+}
+
+.portfolio-cta:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 40px 80px rgba(0, 0, 0, 0.12),
+        0 25px 50px rgba(108, 92, 231, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Contenido del CTA */
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Icono del CTA */
+.cta-icon-wrapper {
+    margin-bottom: 30px;
+}
+
+.cta-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3);
+}
+
+.cta-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+.icon-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+    animation: ctaPulse 2s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Contenido de texto */
+.cta-text-content {
+    text-align: left;
+}
+
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(72, 52, 212, 0.15));
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.cta-badge i {
+    font-size: 0.8rem;
+    color: #ffd700;
+    animation: ctaSparkle 2s ease-in-out infinite;
+}
+
+.cta-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 35px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* Características del CTA */
+.cta-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.cta-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.cta-feature i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+/* Botones de acción */
+.cta-actions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.cta-main-btn {
+    padding: 18px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-main-btn .btn-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.cta-main-btn:hover .btn-glow {
+    left: 100%;
+}
+
+.cta-main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(108, 92, 231, 0.4);
+}
+
+.cta-whatsapp-btn {
+    padding: 18px 28px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.cta-whatsapp-btn:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+    color: white;
+}
+
+/* Estadísticas */
+.cta-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+/* Parte visual del CTA */
+.cta-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+/* Elementos flotantes */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.floating-element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: ctaFloatingElement 6s ease-in-out infinite;
+}
+
+.floating-element i {
+    font-size: 20px;
+}
+
+.element-1 {
+    top: 10%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.element-1 i {
+    color: #61DAFB; /* React */
+}
+
+.element-2 {
+    top: 20%;
+    left: 5%;
+    animation-delay: 1s;
+}
+
+.element-2 i {
+    color: #F7DF1E; /* JavaScript */
+}
+
+.element-3 {
+    bottom: 30%;
+    right: 5%;
+    animation-delay: 2s;
+}
+
+.element-3 i {
+    color: #E44D26; /* HTML5 */
+}
+
+.element-4 {
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 3s;
+}
+
+.element-4 i {
+    color: #264DE4; /* CSS3 */
+}
+
+.element-5 {
+    top: 50%;
+    left: -10%;
+    animation-delay: 4s;
+}
+
+.element-5 i {
+    color: #3776AB; /* Python */
+}
+
+.element-6 {
+    top: 30%;
+    right: -5%;
+    animation-delay: 5s;
+}
+
+.element-6 i {
+    color: #F89820; /* Java */
+}
+
+/* Visual principal */
+.cta-main-visual {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+}
+
+.visual-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(108, 92, 231, 0.2);
+}
+
+.circle-1 {
+    width: 100%;
+    height: 100%;
+    animation: ctaRotate 20s linear infinite;
+}
+
+.circle-2 {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    animation: ctaRotate 15s linear infinite reverse;
+}
+
+.circle-3 {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    animation: ctaRotate 10s linear infinite;
+}
+
+.central-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3);
+}
+
+.central-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+
+@keyframes ctaFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes ctaParticleMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50px); }
+}
+
+@keyframes ctaPulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes ctaSparkle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes ctaFloatingElement {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(5deg); }
+    66% { transform: translateY(5px) rotate(-5deg); }
+}
+
+@keyframes ctaRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .portfolio-cta {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 40px;
+        text-align: center;
+    }
+    
+    .cta-text-content {
+        text-align: center;
+    }
+    
+    .cta-image-container {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+    
+    .cta-title {
+        font-size: 2.4rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .project-cta-section {
+        padding: 80px 0;
+    }
+    
+    .portfolio-cta {
+        padding: 40px 20px;
+        border-radius: 16px;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .cta-features {
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+    
+    .cta-feature {
+        font-size: 0.9rem;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+    
+    .cta-main-btn,
+    .cta-whatsapp-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+        font-size: 1rem;
+    }
+    
+    .cta-stats {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 25px;
+    }
+    
+    .stat-divider {
+        display: none;
+    }
+    
+    .cta-image-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .floating-element {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .floating-element i {
+        font-size: 16px;
+    }
+    
+    .cta-main-visual {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .central-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .central-icon i {
+        font-size: 24px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-badge {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .portfolio-cta {
+        margin: 0 10px;
+    }
+    
+    .cta-image-container {
+        width: 180px;
+        height: 180px;
+    }
+}

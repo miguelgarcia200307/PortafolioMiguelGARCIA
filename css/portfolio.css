@@ -1,0 +1,1521 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.portfolio-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-description {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+}
+
+.project-link {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Diseño de cuadrícula */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-item h3 {
+    margin: 10px;
+    font-size: 1.5rem;
+    color: #4e54c8;
+}
+
+.portfolio-item p {
+    margin: 10px;
+    color: #666;
+}
+
+/* ===== PORTFOLIO: DISEÑO PREMIUM AVANZADO ===== */
+
+/* Estructura base del portafolio */
+#portfolio {
+    padding: var(--spacing-xl) 0 60px 0;
+    background-image: 
+        radial-gradient(circle at 80% 10%, rgba(72, 52, 212, 0.03) 0%, transparent 25%),
+        radial-gradient(circle at 20% 90%, rgba(108, 92, 231, 0.02) 0%, transparent 20%),
+        linear-gradient(135deg, var(--bg-light), var(--bg-lighter));
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Formas decorativas de fondo */
+.portfolio-bg-shape {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.portfolio-bg-circle {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(108, 92, 231, 0.03) 0%, transparent 70%);
+    top: -150px;
+    right: -100px;
+    animation: float 15s infinite alternate ease-in-out;
+}
+
+.portfolio-bg-dots {
+    width: 300px;
+    height: 300px;
+    background-image: radial-gradient(rgba(72, 52, 212, 0.2) 1px, transparent 1px);
+    background-size: 15px 15px;
+    bottom: -50px;
+    left: -50px;
+    opacity: 0.15;
+    transform: rotate(-10deg);
+    animation: rotateSlow 40s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-30px) rotate(5deg); }
+    100% { transform: translateY(20px) rotate(-5deg); }
+}
+
+@keyframes rotateSlow {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+/* Grid de proyectos con diseño responsive */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Diseño de tarjetas con efecto 3D */
+.portfolio-item {
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    perspective: 1000px;
+}
+
+.portfolio-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.06),
+        0 10px 20px rgba(0, 0, 0, 0.03),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-style: preserve-3d;
+}
+
+.portfolio-item:hover .portfolio-card {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 
+        0 30px 60px rgba(72, 52, 212, 0.15),
+        0 15px 30px rgba(0, 0, 0, 0.04),
+        inset 0 0 0 1px rgba(108, 92, 231, 0.2);
+}
+
+/* Miniatura del proyecto con efectos avanzados */
+.portfolio-thumbnail {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.portfolio-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.33, 1, 0.68, 1);
+    will-change: transform;
+}
+
+.portfolio-item:hover .portfolio-thumbnail img {
+    transform: scale(1.08);
+}
+
+/* Overlay con acciones */
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(72, 52, 212, 0.1) 0%,
+        rgba(72, 52, 212, 0.9) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    width: 100%;
+    padding: 25px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    transition-delay: 0.1s;
+}
+
+.portfolio-item:hover .overlay-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-category {
+    display: inline-block;
+    background: white;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Acciones de proyecto (botones) */
+.portfolio-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.portfolio-action {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+    position: relative;
+}
+
+.portfolio-action.live-demo {
+    transition-delay: 0.2s;
+}
+
+.portfolio-action.github, .portfolio-action.dribbble {
+    transition-delay: 0.3s;
+}
+
+.portfolio-item:hover .portfolio-action {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.portfolio-action:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(72, 52, 212, 0.3);
+}
+
+.portfolio-action i {
+    font-size: 1.1rem;
+}
+
+.action-tooltip {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.action-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: var(--primary-color) transparent transparent transparent;
+}
+
+.portfolio-action:hover .action-tooltip {
+    opacity: 1;
+    top: -40px;
+}
+
+/* Badge destacado */
+.portfolio-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    z-index: 3;
+}
+
+/* Contenido de la tarjeta */
+.portfolio-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+}
+
+.portfolio-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+}
+
+.portfolio-item:hover .portfolio-title {
+    color: var(--primary-color);
+}
+
+.portfolio-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Tags de tecnologías */
+.portfolio-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    background: rgba(72, 52, 212, 0.08);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .tech-tag {
+    background: rgba(72, 52, 212, 0.12);
+}
+
+/* Footer de la tarjeta */
+.portfolio-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.portfolio-link i {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover {
+    color: var(--primary-dark);
+}
+
+.portfolio-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Paginación y botón cargar más */
+.portfolio-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.pagination-btn {
+    border: none;
+    background: linear-gradient(135deg, rgba(72, 52, 212, 0.1), rgba(108, 92, 231, 0.1));
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 
+        0 10px 25px rgba(72, 52, 212, 0.1),
+        0 5px 10px rgba(0, 0, 0, 0.03),
+        inset 0 0 0 1px rgba(108, 92, 231, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.pagination-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.pagination-btn:hover {
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 
+        0 15px 30px rgba(72, 52, 212, 0.2),
+        0 8px 15px rgba(0, 0, 0, 0.04);
+}
+
+.pagination-btn:hover::before {
+    opacity: 1;
+}
+
+.pagination-btn .btn-icon {
+    transition: transform 0.5s ease;
+}
+
+.pagination-btn:hover .btn-icon {
+    transform: rotate(180deg);
+}
+
+/* ========================================
+   CTA SECTION - ¿Tienes un proyecto en mente?
+   ======================================== */
+
+/* Sección principal del CTA */
+.project-cta-section {
+    position: relative;
+    padding: 120px 0;
+    background: linear-gradient(135deg, 
+        rgba(108, 92, 231, 0.05) 0%, 
+        rgba(72, 52, 212, 0.03) 50%, 
+        rgba(255, 255, 255, 0.08) 100%);
+    overflow: hidden;
+}
+
+/* Elementos decorativos de fondo */
+.cta-bg-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(72, 52, 212, 0.05));
+    animation: float 8s ease-in-out infinite;
+}
+
+.cta-shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    right: -50px;
+    animation-delay: 0s;
+}
+
+.cta-shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    left: -30px;
+    animation-delay: 2s;
+}
+
+.cta-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(108, 92, 231, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, rgba(72, 52, 212, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px, 80px 80px;
+    animation: particleMove 20s linear infinite;
+}
+
+/* Container principal */
+.cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Card principal del CTA */
+.portfolio-cta {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 80px 60px;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.08),
+        0 20px 40px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: center;
+}
+
+.portfolio-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(108, 92, 231, 0.02) 0%, 
+        rgba(72, 52, 212, 0.01) 100%);
+    z-index: -1;
+}
+
+.portfolio-cta:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 40px 80px rgba(0, 0, 0, 0.12),
+        0 25px 50px rgba(108, 92, 231, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Contenido del CTA */
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Icono del CTA */
+.cta-icon-wrapper {
+    margin-bottom: 30px;
+}
+
+.cta-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3);
+}
+
+.cta-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+.icon-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+    animation: pulse 2s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Contenido de texto */
+.cta-text-content {
+    text-align: left;
+}
+
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(72, 52, 212, 0.15));
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.cta-badge i {
+    font-size: 0.8rem;
+    color: #ffd700;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.cta-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 35px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* Características del CTA */
+.cta-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.cta-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.cta-feature i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+/* Botones de acción */
+.cta-actions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.cta-main-btn {
+    padding: 18px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-main-btn .btn-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.cta-main-btn:hover .btn-glow {
+    left: 100%;
+}
+
+.cta-main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(108, 92, 231, 0.4);
+}
+
+.cta-whatsapp-btn {
+    padding: 18px 28px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.cta-whatsapp-btn:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+    color: white;
+}
+
+/* Estadísticas */
+.cta-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+/* Parte visual del CTA */
+.cta-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+/* Elementos flotantes */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.floating-element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: floatingElement 6s ease-in-out infinite;
+}
+
+.floating-element i {
+    font-size: 20px;
+}
+
+.element-1 {
+    top: 10%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.element-2 {
+    top: 20%;
+    left: 5%;
+    animation-delay: 1s;
+}
+
+.element-3 {
+    bottom: 30%;
+    right: 5%;
+    animation-delay: 2s;
+}
+
+.element-4 {
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 3s;
+}
+
+.element-5 {
+    top: 50%;
+    left: -10%;
+    animation-delay: 4s;
+}
+
+.element-6 {
+    top: 30%;
+    right: -5%;
+    animation-delay: 5s;
+}
+
+/* Visual principal */
+.cta-main-visual {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+}
+
+.visual-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(108, 92, 231, 0.2);
+}
+
+.circle-1 {
+    width: 100%;
+    height: 100%;
+    animation: rotate 20s linear infinite;
+}
+
+.circle-2 {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    animation: rotate 15s linear infinite reverse;
+}
+
+.circle-3 {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    animation: rotate 10s linear infinite;
+}
+
+.central-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3);
+}
+
+.central-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+/* Animaciones */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes particleMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes floatingElement {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(5deg); }
+    66% { transform: translateY(5px) rotate(-5deg); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - CTA SECTION
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .portfolio-cta {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 40px;
+        text-align: center;
+    }
+    
+    .cta-text-content {
+        text-align: center;
+    }
+    
+    .cta-image-container {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+    
+    .cta-title {
+        font-size: 2.4rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .project-cta-section {
+        padding: 80px 0;
+    }
+    
+    .portfolio-cta {
+        padding: 40px 20px;
+        border-radius: 16px;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .cta-features {
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+    
+    .cta-feature {
+        font-size: 0.9rem;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+    
+    .cta-main-btn,
+    .cta-whatsapp-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+        font-size: 1rem;
+    }
+    
+    .cta-stats {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 25px;
+    }
+    
+    .stat-divider {
+        display: none;
+    }
+    
+    .cta-image-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .floating-element {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .floating-element i {
+        font-size: 16px;
+    }
+    
+    .cta-main-visual {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .central-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .central-icon i {
+        font-size: 24px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-badge {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .portfolio-cta {
+        margin: 0 10px;
+    }
+    
+    .cta-image-container {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* ========================================
+   COLORES ESPECÍFICOS PARA ELEMENTOS FLOTANTES
+   ======================================== */
+
+.element-1 i {
+    color: #61DAFB; /* React */
+}
+
+.element-2 i {
+    color: #F7DF1E; /* JavaScript */
+}
+
+.element-3 i {
+    color: #E44D26; /* HTML5 */
+}
+
+.element-4 i {
+    color: #264DE4; /* CSS3 */
+}
+
+.element-5 i {
+    color: #3776AB; /* Python */
+}
+
+.element-6 i {
+    color: #F89820; /* Java */
+}
+
+/* ========================================
+   MODAL DE PROYECTOS
+   ======================================== */
+
+/* Estilos para el modal de proyectos */
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.project-modal .modal-content {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 20px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    animation: modalSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin: auto;
+    transform: translateZ(0);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 10001;
+}
+
+.project-modal .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    z-index: 1001;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.project-modal .modal-close:hover {
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    padding: 30px 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-header h3 {
+    color: #2c3e50;
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.modal-header p {
+    color: #7f8c8d;
+    margin: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-gallery {
+    padding: 30px;
+}
+
+.main-image-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.main-image-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-counter {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.image-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    z-index: 1002;
+    opacity: 0;
+}
+
+.main-image-container:hover .image-nav-btn {
+    opacity: 1;
+}
+
+.image-nav-btn:hover {
+    background: rgba(108, 92, 231, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.image-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.image-nav-btn:disabled:hover {
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.thumbnail-gallery {
+    margin-top: 20px;
+}
+
+.thumbnails-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #bdc3c7 #ecf0f1;
+}
+
+.thumbnails-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.thumbnails-container::-webkit-scrollbar-track {
+    background: #ecf0f1;
+    border-radius: 3px;
+}
+
+.thumbnails-container::-webkit-scrollbar-thumb {
+    background: #bdc3c7;
+    border-radius: 3px;
+}
+
+.thumbnail-item {
+    flex: 0 0 auto;
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.thumbnail-item:hover,
+.thumbnail-item.active {
+    border-color: #6c5ce7;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.thumbnail-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-description {
+    padding: 0 30px 30px;
+}
+
+.modal-description p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.modal-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.modal-tech-tags .tech-tag {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.modal-actions .btn {
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-actions .primary-btn {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+}
+
+.modal-actions .primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
+}
+
+.modal-actions .secondary-btn {
+    background: #f8f9fa;
+    color: #2c3e50;
+    border: 2px solid #e9ecef;
+}
+
+.modal-actions .secondary-btn:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+/* Asegurar centrado perfecto del modal */
+.project-modal.active {
+    display: flex !important;
+}
+
+/* Mejoras adicionales para el centrado */
+body.modal-open {
+    overflow: hidden;
+    padding-right: 0;
+    position: fixed;
+    width: 100%;
+}
+
+/* Animación mejorada */
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media query para tablets */
+@media (max-width: 1024px) {
+    .project-modal .modal-content {
+        max-width: 95%;
+        margin: 20px;
+    }
+}
+
+/* Responsive para el modal */
+@media (max-width: 768px) {
+    .project-modal {
+        padding: 10px;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    
+    .project-modal .modal-content {
+        margin: 0;
+        max-height: 95vh;
+        width: 100%;
+    }
+
+    .modal-header,
+    .modal-gallery,
+    .modal-description {
+        padding: 20px;
+    }
+
+    .main-image-container img {
+        height: 250px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .modal-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
