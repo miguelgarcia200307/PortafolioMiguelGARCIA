@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Datos de proyectos con claves de traducción
     const projectsData = {
         svfupc: {
-            title: 'SVFUPC - Simulador de Viabilidad Financiera',
-            category: 'Desarrollo Web',
-            description: 'Este proyecto tiene como objetivo crear una aplicación web que simule el cálculo de la nómina de docentes universitarios; tanto de planta, como ocasionales, según el Decreto 1279 de 2002 y el Acuerdo 006 de 2018.',
+            titleKey: 'project_svfupc_title',
+            categoryKey: 'portfolio_category_web',
+            descriptionKey: 'project_svfupc_description',
             images: [
                 'assets/proyectos/NOMINA3.png',
                 'assets/proyectos/NOMINA1.png',
@@ -14,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
             demoLink: 'https://jhonj-g.github.io/NominaU/'
         },
         taskmanager: {
-            title: 'DomiBot: Tu Asistente Virtual para Pedidos y Reservas en Restaurantes',
-            category: 'Programa de Escritorio',
-            description: 'Aplicativo de escritorio para restaurantes que automatiza la atención al cliente mediante un asistente virtual de Telegram. Integra módulos para gestionar pedidos, reservas con seguro, promociones, pagos y configuración dinámica del menú.',
+            titleKey: 'project_domibot_title',
+            categoryKey: 'portfolio_category_app',
+            descriptionKey: 'project_domibot_description',
             images: [
                 'assets/proyectos/DOMIBOT1.png',
                 'assets/proyectos/DOMIBOT2.png',
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'assets/proyectos/DOMIBOT4.png',
                 'assets/proyectos/DOMIBOT5.png',
                 'assets/proyectos/DOMIBOT6.png',
-                 'assets/proyectos/CONVERSACION1.png',
+                'assets/proyectos/CONVERSACION1.png',
                 'assets/proyectos/CONVERSACION2.png'
             ],
             technologies: ['C#', '.NET Framework', 'Telegram.Bot (librería)', 'SQL Server'],
@@ -32,9 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
             demoLink: '#'
         },
         fintech: {
-            title: 'Proyecto de Conversación',
-            category: 'Aplicación',
-            description: 'Sistema de chat y conversación interactivo con funcionalidades avanzadas de comunicación.',
+            titleKey: 'project_conversation_title',
+            categoryKey: 'portfolio_category_app',
+            descriptionKey: 'project_conversation_description',
             images: [
                 'assets/proyectos/CONVERSACION1.png',
                 'assets/proyectos/CONVERSACION2.png'
@@ -44,39 +45,29 @@ document.addEventListener('DOMContentLoaded', function() {
             demoLink: '#'
         },
         dashboard: {
-            title: 'Dashboard Analytics',
-            category: 'Desarrollo Web',
-            description: 'Panel de control analítico con visualización de datos en tiempo real, informes personalizables y exportación de datos.',
+            titleKey: 'project_portfolio_title',
+            categoryKey: 'portfolio_category_web',
+            descriptionKey: 'project_portfolio_description',
             images: [
-                'assets/proyectos/NOMINA1.png' // Placeholder hasta que agregues imágenes específicas
+                'assets/proyectos/PORTAFOLIO.png'
             ],
-            technologies: ['Angular', 'D3.js', 'Node.js'],
-            githubLink: '#',
-            demoLink: '#'
-        },
-        chatbot: {
-            title: 'Asistente Virtual IA',
-            category: 'IA',
-            description: 'Chatbot impulsado por inteligencia artificial para atención al cliente, integrable en múltiples plataformas.',
-            images: [
-                'assets/proyectos/NOMINA2.png' // Placeholder hasta que agregues imágenes específicas
-            ],
-            technologies: ['Python', 'TensorFlow', 'API.ai'],
-            githubLink: '#',
-            demoLink: '#'
-        },
-        healthtracker: {
-            title: 'HealthTracker',
-            category: 'Aplicación',
-            description: 'Aplicación móvil para seguimiento de hábitos saludables, integración con dispositivos wearables y análisis personalizado.',
-            images: [
-                'assets/proyectos/NOMINA3.png'
-            ],
-            technologies: ['React Native', 'GraphQL', 'AWS'],
+            technologies: ['HTML', 'CSS', 'JavaScript'],
             githubLink: '#',
             demoLink: '#'
         }
     };
+
+    // Función para obtener texto traducido
+    function getTranslatedText(key) {
+        if (window.languageSystem && window.languageSystem.translations) {
+            const currentLang = window.languageSystem.currentLang || 'es';
+            return window.languageSystem.translations[currentLang][key] || key;
+        }
+        return key;
+    }
+    
+    // Hacer función global para acceso desde language.js
+    window.getTranslatedText = getTranslatedText;
 
     let currentProject = null;
     let currentImageIndex = 0;
@@ -91,9 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         currentImageIndex = 0;
         
-        document.getElementById('modal-project-title').textContent = currentProject.title;
-        document.getElementById('modal-project-category').textContent = currentProject.category;
-        document.getElementById('modal-project-description').textContent = currentProject.description;
+        // Usar textos traducidos
+        document.getElementById('modal-project-title').textContent = getTranslatedText(currentProject.titleKey);
+        document.getElementById('modal-project-category').textContent = getTranslatedText(currentProject.categoryKey);
+        document.getElementById('modal-project-description').textContent = getTranslatedText(currentProject.descriptionKey);
         
         document.getElementById('modal-github-link').href = currentProject.githubLink;
         document.getElementById('modal-demo-link').href = currentProject.demoLink;
@@ -117,6 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('modal-open');
         document.body.style.overflow = 'hidden';
         document.body.style.top = `-${scrollPosition}px`;
+        
+        // Hacer el proyecto actual globalmente accesible
+        window.currentProject = currentProject;
     }
 
     window.closeProjectModal = function() {
@@ -133,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo(0, scrollPosition);
         
         currentProject = null;
+        window.currentProject = null;
         currentImageIndex = 0;
         
         // Prevenir cualquier navegación adicional
@@ -145,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Actualizar imagen principal
         const mainImage = document.getElementById('modal-main-image');
         mainImage.src = currentProject.images[currentImageIndex];
-        mainImage.alt = currentProject.title;
+        mainImage.alt = getTranslatedText(currentProject.titleKey);
 
         // Actualizar contador
         document.getElementById('current-image').textContent = currentImageIndex + 1;
@@ -162,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const thumbnailImg = document.createElement('img');
             thumbnailImg.src = image;
-            thumbnailImg.alt = `${currentProject.title} - Imagen ${index + 1}`;
+            thumbnailImg.alt = `${getTranslatedText(currentProject.titleKey)} - Imagen ${index + 1}`;
 
             thumbnailDiv.appendChild(thumbnailImg);
             thumbnailsContainer.appendChild(thumbnailDiv);

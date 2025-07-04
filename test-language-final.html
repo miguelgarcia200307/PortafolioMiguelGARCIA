@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Idiomas - Final QA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        
+        .section h2 {
+            color: #333;
+            margin-top: 0;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        
+        .test-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .test-item strong {
+            color: #007bff;
+        }
+        
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .language-selector select {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        
+        .status {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .modal-test {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background: #0056b3;
+        }
+        
+        .btn.secondary {
+            background: #6c757d;
+        }
+        
+        .btn.secondary:hover {
+            background: #545b62;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <label for="langSelect">Idioma:</label>
+        <select id="langSelect">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+        </select>
+    </div>
+
+    <div class="test-container">
+        <div class="status success">
+            <span data-i18n="test_status">✓ Test de idiomas - Todos los elementos configurados correctamente</span>
+        </div>
+        
+        <h1 data-i18n="test_title">Test Final QA - Sistema de Idiomas</h1>
+        
+        <!-- Navegación -->
+        <div class="section">
+            <h2 data-i18n="test_nav_title">Navegación</h2>
+            <div class="test-item">
+                <strong data-i18n="nav_home">Inicio</strong> | 
+                <strong data-i18n="nav_about">Sobre Mí</strong> | 
+                <strong data-i18n="nav_skills">Habilidades</strong> | 
+                <strong data-i18n="nav_portfolio">Proyectos</strong> | 
+                <strong data-i18n="nav_contact">Contacto</strong>
+            </div>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="section">
+            <h2 data-i18n="test_hero_title">Sección Hero</h2>
+            <div class="test-item">
+                <strong data-i18n="hero_badge">Disponible para proyectos</strong>
+            </div>
+            <div class="test-item">
+                <span data-i18n="hero_title">Hola, soy</span> Miguel Garcia
+            </div>
+            <div class="test-item">
+                <span data-i18n="hero_description">Transformo ideas en experiencias digitales excepcionales, combinando diseño moderno con desarrollo técnico avanzado.</span>
+            </div>
+        </div>
+        
+        <!-- Certificaciones -->
+        <div class="section">
+            <h2 data-i18n="test_cert_title">Certificaciones</h2>
+            <div class="test-item">
+                <strong data-i18n="cert_java_title">Curso: JAVA FUNDAMENTAL</strong><br>
+                <em data-i18n="cert_java_provider">ORACLE ACADEMY</em><br>
+                <span data-i18n="cert_java_description">Certificación oficial de Oracle en Java Fundamental, enfocada en Programación Orientada a Objetos. Ideal para iniciar tu carrera como desarrollador con una base sólida y reconocida a nivel internacional.</span>
+            </div>
+            <div class="test-item">
+                <strong data-i18n="cert_python_title">Python desde cero 2023</strong><br>
+                <em data-i18n="cert_python_provider">EDteam</em><br>
+                <span data-i18n="cert_python_description">Certificación en Python desde Cero 2023: Aprende a programar con uno de los lenguajes más demandados del mundo. Curso práctico y actualizado.</span>
+            </div>
+        </div>
+        
+        <!-- Proyectos -->
+        <div class="section">
+            <h2 data-i18n="test_projects_title">Proyectos</h2>
+            <div class="test-item">
+                <strong data-i18n="project_svfupc_title">SVFUPC - Simulador de Viabilidad Financiera</strong><br>
+                <span data-i18n="project_svfupc_description">Este proyecto tiene como objetivo crear una aplicación web que simule el cálculo de la folha de pagamento de profesores universitarios; tanto efectivos como ocasionales, según el Decreto 1279 de 2002 y el Acuerdo 006 de 2018.</span>
+            </div>
+            <div class="test-item">
+                <strong data-i18n="project_domibot_title">DomiBot: Su Asistente Virtual para Pedidos y Reservas en Restaurantes</strong><br>
+                <span data-i18n="project_domibot_description">Aplicativo de escritorio para restaurantes que automatiza la atención al cliente mediante un asistente virtual de Telegram. Integra módulos para gestionar pedidos, reservas con seguro, promociones, pagos y configuración dinámica del menú.</span>
+            </div>
+        </div>
+        
+        <!-- Modal Test -->
+        <div class="section">
+            <h2 data-i18n="test_modal_title">Modal y Botones</h2>
+            <div class="test-item">
+                <button class="btn" onclick="openTestModal()" data-i18n="test_open_modal">Abrir Modal de Prueba</button>
+            </div>
+        </div>
+        
+        <!-- Contacto -->
+        <div class="section">
+            <h2 data-i18n="test_contact_title">Contacto</h2>
+            <div class="test-item">
+                <span data-i18n="contact_card_desc">¡Conversemos sobre tu proyecto! Envíame un mensaje y te responderé inmediatamente.</span>
+            </div>
+            <div class="test-item">
+                <strong data-i18n="contact_email">Email</strong>: devmiguelgarcia@gmail.com
+            </div>
+            <div class="test-item">
+                <strong data-i18n="contact_whatsapp">WhatsApp</strong>: +57 311 731 2426
+            </div>
+        </div>
+        
+        <!-- FAQ -->
+        <div class="section">
+            <h2 data-i18n="test_faq_title">FAQ</h2>
+            <div class="test-item">
+                <strong data-i18n="contact_faq_services">¿Qué servicios ofreces?</strong><br>
+                <span data-i18n="contact_faq_services_answer">Ofrezco servicios completos de desarrollo web, incluyendo frontend y backend, diseño de interfaces, desarrollo de aplicaciones móviles, y consultoría técnica. Me especializo en crear soluciones digitales personalizadas que se adapten a las necesidades específicas de cada cliente.</span>
+            </div>
+            <div class="test-item">
+                <strong data-i18n="contact_faq_rates">¿Cuáles son tus tarifas?</strong><br>
+                <span data-i18n="contact_faq_rates_answer">Mis tarifas varían según el tipo y alcance del proyecto. Puedo trabajar con presupuestos por proyecto o por horas, adaptándome a tus necesidades. Contáctame para recibir una cotización personalizada.</span>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="section">
+            <h2 data-i18n="test_footer_title">Footer</h2>
+            <div class="test-item">
+                <span data-i18n="footer_copyright">© 2025 Miguel Garcia. Todos los derechos reservados.</span>
+            </div>
+            <div class="test-item">
+                <span data-i18n="footer_made_with">Hecho con</span> ❤️ <span data-i18n="footer_using_tech">usando HTML, CSS & JavaScript</span>
+            </div>
+        </div>
+    </div>
+    
+        
+        <!-- Sección de Contacto -->
+        <div class="section">
+            <h2>Contacto WhatsApp</h2>
+            <div class="test-item">
+                <strong data-i18n="contact_direct_title">Contacto Directo</strong>
+                <p data-i18n="contact_direct_description">¡Conversemos sobre tu proyecto! Envíame un mensaje y te responderé inmediatamente.</p>
+                <div>• <span data-i18n="contact_immediate_response">Respuesta inmediata</span></div>
+                <div>• <span data-i18n="contact_fluid_conversation">Conversación fluida</span></div>
+            </div>
+        </div>
+        
+    <!-- Modal de Prueba -->
+    <div id="testModal" class="modal-test">
+        <div class="modal-content">
+            <h3 data-i18n="test_modal_header">Modal de Prueba</h3>
+            <p data-i18n="test_modal_content">Este es un modal de prueba para verificar que los botones y contenido se traducen correctamente.</p>
+            <div style="margin-top: 20px;">
+                <button class="btn" data-i18n="portfolio_code">Ver Código</button>
+                <button class="btn secondary" data-i18n="portfolio_view_demo">Ver Demo</button>
+                <button class="btn secondary" onclick="closeTestModal()" data-i18n="modal_close">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cargar sistema de idiomas -->
+    <script src="js/language.js"></script>
+    
+    <script>
+        // Configurar selector de idioma
+        document.addEventListener('DOMContentLoaded', function() {
+            const langSelect = document.getElementById('langSelect');
+            
+            // Establecer idioma actual en el selector
+            if (window.languageSystem) {
+                langSelect.value = window.languageSystem.currentLang || 'es';
+            }
+            
+            // Manejar cambio de idioma
+            langSelect.addEventListener('change', function() {
+                if (window.languageSystem) {
+                    window.languageSystem.setLanguage(this.value);
+                }
+            });
+        });
+        
+        // Funciones para el modal de prueba
+        function openTestModal() {
+            document.getElementById('testModal').style.display = 'block';
+        }
+        
+        function closeTestModal() {
+            document.getElementById('testModal').style.display = 'none';
+        }
+        
+        // Cerrar modal al hacer clic fuera
+        window.onclick = function(event) {
+            const modal = document.getElementById('testModal');
+            if (event.target == modal) {
+                closeTestModal();
+            }
+        }
+    </script>
+</body>
+</html>

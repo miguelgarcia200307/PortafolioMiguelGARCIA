@@ -26,8 +26,10 @@
     <link rel="stylesheet" href="css/cta-section.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/language.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="js/language.js" as="script">
 </head>
 <body>
     <!-- Navegación -->
@@ -38,13 +40,36 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home" class="nav-link">Inicio</a></li>
-                    <li><a href="#about" class="nav-link">Sobre Mí</a></li>
-                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
-                    <li><a href="#portfolio" class="nav-link">Proyectos</a></li>
-                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                    <li><a href="#home" class="nav-link" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="#about" class="nav-link" data-i18n="nav_about">Sobre Mí</a></li>
+                    <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Habilidades</a></li>
+                    <li><a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="language-selector">
+                <div class="language-toggle">
+                    <div class="current-lang">
+                        <span class="flag-icon flag-es"></span>
+                        <span class="lang-text">ES</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="language-dropdown">
+                        <div class="lang-option" data-lang="es">
+                            <span class="flag-icon flag-es"></span>
+                            <span class="lang-text">Español</span>
+                        </div>
+                        <div class="lang-option" data-lang="en">
+                            <span class="flag-icon flag-en"></span>
+                            <span class="lang-text">English</span>
+                        </div>
+                        <div class="lang-option" data-lang="pt">
+                            <span class="flag-icon flag-pt"></span>
+                            <span class="lang-text">Português</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="menu-toggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -67,24 +92,24 @@
                 <!-- Badge de estado profesional -->
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
-                    <span class="badge-text">Disponible para proyectos</span>
+                    <span class="badge-text" data-i18n="hero_badge">Disponible para proyectos</span>
                 </div>
                 
                 <!-- Título principal mejorado -->
                 <h1 class="hero-title animate-text">
-                    Hola, soy <span class="highlight">{Miguel Garcia}</span>
+                    <span data-i18n="hero_title">Hola, soy</span> <span class="highlight">{Miguel Garcia}</span>
                 </h1>
                 
                 <!-- Efecto typewriter mejorado -->
                 <div class="typewriter-container">
-                    <span class="typewriter-prefix">Especialista en</span>
+                    <span class="typewriter-prefix" data-i18n="hero_typewriter_prefix">Especialista en</span>
                     <div class="typewriter">
                         <span id="typewriter-text"></span>
                     </div>
                 </div>
                 
                 <!-- Descripción profesional -->
-                <p class="hero-description">
+                <p class="hero-description" data-i18n="hero_description">
                     Transformo ideas en experiencias digitales excepcionales, 
                     combinando diseño moderno con desarrollo técnico avanzado.
                 </p>
@@ -93,36 +118,36 @@
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">10+</span>
-                        <span class="stat-label">Proyectos</span>
+                        <span class="stat-label" data-i18n="hero_stats_projects">Proyectos</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">4+</span>
-                        <span class="stat-label">Tecnologías</span>
+                        <span class="stat-label" data-i18n="hero_stats_technologies">Tecnologías</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Satisfacción</span>
+                        <span class="stat-label" data-i18n="hero_stats_satisfaction">Satisfacción</span>
                     </div>
                 </div>
                 
                 <!-- Botones de acción mejorados -->
                 <div class="hero-btns">
                     <a href="#portfolio" class="btn primary-btn hero-btn-primary">
-                        <span class="btn-text">Ver Proyectos</span>
+                        <span class="btn-text" data-i18n="hero_btn_projects">Ver Proyectos</span>
                         <i class="fas fa-arrow-right"></i>
                         <div class="btn-shine"></div>
                     </a>
                     <a href="#contact" class="btn secondary-btn hero-btn-secondary">
                         <i class="fas fa-envelope"></i>
-                        <span class="btn-text">Contáctame</span>
+                        <span class="btn-text" data-i18n="hero_btn_contact">Contáctame</span>
                     </a>
                 </div>
                 
                 <!-- Enlaces sociales rápidos -->
                 <div class="hero-social">
-                    <span class="social-label">Sígueme en</span>
+                    <span class="social-label" data-i18n="hero_social_label">Sígueme en</span>
                     <div class="social-links">
                         <a href="https://github.com/miguelg-dev" target="_blank" class="social-link github">
                             <i class="fab fa-github"></i>
@@ -192,8 +217,8 @@
     <!-- Sobre mí con efectos premium -->
     <section id="about" data-aos="fade-up" data-aos-duration="1000">
         <div class="section-header">
-            <span class="section-subtitle">Conóceme</span>
-            <h2 class="section-title">Sobre <span class="highlight">Mí</span></h2>
+            <span class="section-subtitle" data-i18n="about_subtitle">Conóceme mejor</span>
+            <h2 class="section-title" data-i18n-html="about_title">Sobre <span class="highlight">Mí</span></h2>
         </div>
         
         <div class="about-container">
@@ -201,41 +226,41 @@
                 <img src="assets/img/Miguel2.png" alt="Sobre Mí">
                 <div class="experience-badge">
                     <span class="number">3+</span>
-                    <span class="text">Años de<br>Experiencia</span>
+                    <span class="text" data-i18n-html="about_years_experience">Años de<br>Experiencia</span>
                 </div>
             </div>
             
             <div class="about-content" data-aos="fade-left">
-                <h3>Desarrollador Web Creativo y Apasionado</h3>
-                <p>Soy estudiante de Ingeniería de Sistemas en sexto semestre  con interés en el desarrollo de software. En mis primeros años de carrera, he trabajado en diversos proyectos, incluyendo una página web con la que gané una hackatón organizada por Talentotech. Tengo conocimientos en Python, C++, Java, JavaScript, CSS y HTML, y me encuentro en el quinto semestre de mi carrera.Mi objetivo profesional es especializarme en Full Stack Development, combinando habilidades en frontend y backend para crear aplicaciones funcionales. Además, he obtenido varios certificados que respaldan mis conocimientos en el área.Soy una persona dedicada al aprendizaje continuo, con interés en aplicar nuevas tecnologías para resolver problemas de manera eficiente.</p>
+                <h3 data-i18n="about_main_title">Desarrollador Web Creativo y Apasionado</h3>
+                <p data-i18n="about_description">Soy estudiante de Ingeniería de Sistemas en sexto semestre con interés en el desarrollo de software. En mis primeros años de carrera, he trabajado en diversos proyectos, incluyendo una página web con la que gané una hackatón organizada por Talentotech. Tengo conocimientos en Python, C++, Java, JavaScript, CSS y HTML, y me encuentro en el quinto semestre de mi carrera.Mi objetivo profesional es especializarme en Full Stack Development, combinando habilidades en frontend y backend para crear aplicaciones funcionales. Además, he obtenido varios certificados que respaldan mis conocimientos en el área.Soy una persona dedicada al aprendizaje continuo, con interés en aplicar nuevas tecnologías para resolver problemas de manera eficiente.</p>
                 
                 <div class="about-info">
                     <div class="info-item">
                         <i class="fas fa-award"></i>
                         <div>
-                            <h4>Experiencia práctica</h4>
-                            <p>+3 años en desarrollo web</p>
+                            <h4 data-i18n="about_experience_title">Experiencia práctica</h4>
+                            <p data-i18n="about_experience_desc">+3 años en desarrollo web</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-graduation-cap"></i>
                         <div>
-                            <h4>Educación</h4>
-                            <p>Ingeniería en Sistemas Computacionales</p>
+                            <h4 data-i18n="about_education_title">Educación</h4>
+                            <p data-i18n="about_education_desc">Ingeniería en Sistemas Computacionales</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-language"></i>
                         <div>
-                            <h4>Idiomas</h4>
-                            <p>Español (nativo), Inglés (Basico)</p>
+                            <h4 data-i18n="about_languages_title">Idiomas</h4>
+                            <p data-i18n="about_languages_desc">Español (nativo), Inglés (Básico)</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-laptop-code"></i>
                         <div>
-                            <h4>Disponibilidad</h4>
-                            <p>Freelance, Tiempo Completo, Proyectos</p>
+                            <h4 data-i18n="about_availability_title">Disponibilidad</h4>
+                            <p data-i18n="about_availability_desc">Freelance, Tiempo Completo, Proyectos</p>
                         </div>
                     </div>
                 </div>
@@ -243,17 +268,15 @@
                 <div class="about-facts">
                     <div class="fact">
                         <span class="counter" data-target="10">10</span>
-                        <p>Proyectos Completados</p>
+                        <p data-i18n="about_projects_completed">Proyectos Completados</p>
                     </div>
                     <div class="fact">
                         <span class="counter" data-target="10">10</span>
-                        <p>Clientes Satisfechos</p>
+                        <p data-i18n="about_satisfied_clients">Clientes Satisfechos</p>
                     </div>
                     <div class="fact">
-                        <span class="counter" data-target="3">3
-                            
-                        </span>
-                        <p>Premios Recibidos</p>
+                        <span class="counter" data-target="3">3</span>
+                        <p data-i18n="about_awards_received">Premios Recibidos</p>
                     </div>
                 </div>
                 
@@ -272,7 +295,7 @@
                 
                 <div class="cv-actions">
                     <a href="#" class="btn primary-btn cv-button" onclick="openCVModal()">
-                        <i class="fas fa-eye"></i> Ver CV
+                        <i class="fas fa-eye"></i> <span data-i18n="about_cv_view">Ver CV</span>
                     </a>
                     <a href="assets/pdf/cv1.pdf" class="btn secondary-btn cv-download-button" download="CV_Miguel_Garcia.pdf" target="_blank" title="Descarga directa">
                         <i class="fas fa-download"></i>
@@ -289,8 +312,8 @@
         <div class="skills-bg-shape skills-bg-dots"></div>
 
         <div class="section-header">
-            <span class="section-subtitle">Mis especialidades</span>
-            <h2 class="section-title">Mis <span class="highlight">Habilidades</span></h2>
+            <span class="section-subtitle" data-i18n="skills_subtitle">Mis especialidades</span>
+            <h2 class="section-title" data-i18n-html="skills_title">Mis <span class="highlight">Habilidades</span></h2>
         </div>
         
         <div class="skills-container">
@@ -300,8 +323,8 @@
                     <div class="category-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Frontend Development</h3>
-                    <p>Creando interfaces modernas y responsivas</p>
+                    <h3 data-i18n="skills_frontend_title">Frontend Development</h3>
+                    <p data-i18n="skills_frontend_desc">Creando interfaces modernas y responsivas</p>
                 </div>
                 
                 <div class="skills-grid">
@@ -311,7 +334,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>HTML5</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -321,7 +344,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>CSS3</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -331,7 +354,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>JavaScript</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -341,11 +364,9 @@
                         </div>
                         <div class="skill-info">
                             <h4>React</h4>
-                            <span class="skill-level advanced">Intermedio</span>
+                            <span class="skill-level advanced" data-i18n="skills_level_intermediate">Intermedio</span>
                         </div>
                     </div>
-                    
-                   
                     
                     <div class="skill-item">
                         <div class="skill-logo">
@@ -353,7 +374,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>Bootstrap</h4>
-                            <span class="skill-level basic">Basico </span>
+                            <span class="skill-level basic" data-i18n="skills_level_basic">Básico</span>
                         </div>
                     </div>
                 </div>
@@ -365,8 +386,8 @@
                     <div class="category-icon">
                         <i class="fas fa-server"></i>
                     </div>
-                    <h3>Backend Development</h3>
-                    <p>Construyendo APIs robustas y escalables</p>
+                    <h3 data-i18n="skills_backend_title">Backend Development</h3>
+                    <p data-i18n="skills_backend_desc">Construyendo APIs robustas y escalables</p>
                 </div>
                 
                 <div class="skills-grid">
@@ -376,7 +397,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>Node.js</h4>
-                            <span class="skill-level basic">Basico </span>
+                            <span class="skill-level basic" data-i18n="skills_level_basic">Básico</span>
                         </div>
                     </div>
                     
@@ -386,7 +407,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>Python</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -396,7 +417,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>Java</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -406,7 +427,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>MySQL</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
 
@@ -415,8 +436,8 @@
                             <i class="fas fa-database"></i>
                         </div>
                         <div class="skill-info">
-                            <h4>SQL Server </h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <h4>SQL Server</h4>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
 
@@ -426,7 +447,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>Postgres</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -436,7 +457,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>Git</h4>
-                            <span class="skill-level intermediate">Intermedio</span>
+                            <span class="skill-level intermediate" data-i18n="skills_level_intermediate">Intermedio</span>
                         </div>
                     </div>
                     
@@ -446,7 +467,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>REST APIs</h4>
-                            <span class="skill-level intermediate">Intermedio</span>
+                            <span class="skill-level intermediate" data-i18n="skills_level_intermediate">Intermedio</span>
                         </div>
                     </div>
                 </div>
@@ -458,8 +479,8 @@
                     <div class="category-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Herramientas & Otras Habilidades</h3>
-                    <p>Tecnologías adicionales que manejo</p>
+                    <h3 data-i18n="skills_tools_title">Herramientas & Otras Habilidades</h3>
+                    <p data-i18n="skills_tools_desc">Tecnologías adicionales que manejo</p>
                 </div>
                 
                 <div class="skills-grid tools-grid">
@@ -469,7 +490,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>Figma</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -479,7 +500,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>GitHub</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -489,7 +510,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>Responsive Design</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -499,7 +520,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>SEO</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
                         </div>
                     </div>
                     
@@ -509,7 +530,7 @@
                         </div>
                         <div class="skill-info">
                             <h4>UI/UX Design</h4>
-                            <span class="skill-level intermediate">Intermedio</span>
+                            <span class="skill-level intermediate" data-i18n="skills_level_intermediate">Intermedio</span>
                         </div>
                     </div>
                     
@@ -519,7 +540,9 @@
                         </div>
                         <div class="skill-info">
                             <h4>Performance</h4>
-                            <span class="skill-level expert">Avanzado</span>
+                            <span class="skill-level expert" data-i18n="skills_level_advanced">Avanzado</span>
+                        </div>
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -555,7 +578,7 @@
         
         <!-- Certificaciones mejoradas con diseño premium -->
         <div class="skills-certifications" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="certifications-title"><span>Certificaciones</span> y Educación Técnica</h3>                <div class="certification-container">
+            <h3 class="certifications-title" data-i18n-html="skills_certifications_title"><span>Certificaciones</span> y Educación Técnica</h3>                <div class="certification-container">
                 <!-- Certificado Java Oracle -->
                 <div class="certification-item" data-aos="zoom-in" data-aos-delay="100">
                     <div class="certification-card">
@@ -565,17 +588,17 @@
                         </div>
                         <div class="certification-badge">2024</div>
                         <div class="certification-content">
-                            <h4>Curso: JAVA FUNDAMENTAL</h4>
+                            <h4 data-i18n="cert_java_title">Curso: JAVA FUNDAMENTAL</h4>
                             <div class="certification-provider">
                                 <img src="assets/img/oracle.jpg" alt="ORACLE ACADEMY LOGO">
-                                <span>ORACLE ACADEMY</span>
+                                <span data-i18n="cert_java_provider">ORACLE ACADEMY</span>
                             </div>
-                            <p>Certificación oficial de Oracle en Java Fundamental, enfocada en Programación Orientada a Objetos. Ideal para iniciar tu carrera como desarrollador con una base sólida y reconocida a nivel internacional.</p>
+                            <p data-i18n="cert_java_description">Certificación oficial de Oracle en Java Fundamental, enfocada en Programación Orientada a Objetos. Ideal para iniciar tu carrera como desarrollador con una base sólida y reconocida a nivel internacional.</p>
                             <div class="certification-meta">
-                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2024</span>
-                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> <span data-i18n="cert_java_date">Noviembre 2024</span></span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> <span data-i18n="cert_java_credential">CERTIFICADO</span></span>
                             </div>
-                            <a href="#" class="certification-link" data-certificate="assets/certificates/JAVA.png">Ver certificado <i class="fas fa-certificate"></i></a>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/JAVA.png"><span data-i18n="skills_view_certificate">Ver certificado</span> <i class="fas fa-certificate"></i></a>
                         </div>
                     </div>
                 </div>
@@ -589,17 +612,17 @@
                         </div>
                         <div class="certification-badge">2024</div>
                         <div class="certification-content">
-                            <h4>Curso: PROGRAMACIÓN BÁSICO</h4>
+                            <h4 data-i18n="cert_talento_title">Curso: PROGRAMACIÓN BÁSICO</h4>
                             <div class="certification-provider">
                                 <img src="assets/certificates/tech.jpg" alt="TALENTO TECH LOGO">
-                                <span>Talento Tech</span>
+                                <span data-i18n="cert_talento_provider">Talento Tech</span>
                             </div>
-                            <p>Certificación en programación básica proporcionada por Talento Tech. Fundamentos sólidos de programación, lógica computacional y primeros pasos en desarrollo de software.</p>
+                            <p data-i18n="cert_talento_description">Certificación en programación básica proporcionada por Talento Tech. Fundamentos sólidos de programación, lógica computacional y primeros pasos en desarrollo de software.</p>
                             <div class="certification-meta">
-                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2024</span>
-                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> <span data-i18n="cert_talento_date">Noviembre 2024</span></span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> <span data-i18n="cert_talento_credential">CERTIFICADO</span></span>
                             </div>
-                            <a href="#" class="certification-link" data-certificate="assets/certificates/Certificado-talento.jpg">Ver certificado <i class="fas fa-certificate"></i></a>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/Certificado-talento.jpg"><span data-i18n="skills_view_certificate">Ver certificado</span> <i class="fas fa-certificate"></i></a>
                         </div>
                     </div>
                 </div>
@@ -612,17 +635,17 @@
                         </div>
                         <div class="certification-badge">2024</div>
                         <div class="certification-content">
-                            <h4>SQL & Databases</h4>
+                            <h4 data-i18n="cert_sql_title">SQL & Databases</h4>
                             <div class="certification-provider">
                                 <img src="assets/img/coursera-logo.png" alt="Coursera">
-                                <span>Coursera</span>
+                                <span data-i18n="cert_sql_provider">Coursera</span>
                             </div>
-                            <p>Especialización en diseño de bases de datos relacionales y SQL avanzado.</p>
+                            <p data-i18n="cert_sql_description">Especialización en diseño de bases de datos relacionales y SQL avanzado.</p>
                             <div class="certification-meta">
-                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Diciembre 2023</span>
-                                <span class="certification-credential"><i class="fas fa-award"></i> Credencial: SQL-2023-5678</span>
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> <span data-i18n="cert_sql_date">Diciembre 2023</span></span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> <span data-i18n="cert_sql_credential">Credencial: SQL-2023-5678</span></span>
                             </div>
-                            <a href="#" class="certification-link" data-certificate="assets/certificates/tech.jpg">Ver certificado <i class="fas fa-certificate"></i></a>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/tech.jpg"><span data-i18n="skills_view_certificate">Ver certificado</span> <i class="fas fa-certificate"></i></a>
                         </div>
                     </div>
                 </div>
@@ -635,17 +658,17 @@
                         </div>
                         <div class="certification-badge">2022</div>
                         <div class="certification-content">
-                            <h4>HTML Desde Cего</h4>
+                            <h4 data-i18n="cert_html_title">HTML Desde Cero</h4>
                             <div class="certification-provider">
                                 <img src="assets/img/edteam.png" alt="EDteam">
-                                <span>EDteam</span>
+                                <span data-i18n="cert_html_provider">EDteam</span>
                             </div>
-                            <p>Certificación en HTML desde Cero por EDteam: Formación completa y práctica para dominar la estructura de páginas web.</p>
+                            <p data-i18n="cert_html_description">Certificación en HTML desde Cero por EDteam: Formación completa y práctica para dominar la estructura de páginas web.</p>
                             <div class="certification-meta">
-                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2022</span>
-                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> <span data-i18n="cert_html_date">Noviembre 2022</span></span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> <span data-i18n="cert_html_credential">CERTIFICADO</span></span>
                             </div>
-                            <a href="#" class="certification-link" data-certificate="assets/certificates/certificado-ruta-html-2020.png">Ver certificado <i class="fas fa-certificate"></i></a>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/certificado-ruta-html-2020.png"><span data-i18n="skills_view_certificate">Ver certificado</span> <i class="fas fa-certificate"></i></a>
                         </div>
                     </div>
             
@@ -658,18 +681,17 @@
                         </div>
                         <div class="certification-badge">2024</div>
                         <div class="certification-content">
-                            <h4>Python desde ceroо 2023
-</h4>
+                            <h4 data-i18n="cert_python_title">Python desde cero 2023</h4>
                             <div class="certification-provider">
                                 <img src="assets/img/edteam.png" alt="EDteam">
-                                <span>EDteam</span>
+                                <span data-i18n="cert_python_provider">EDteam</span>
                             </div>
-                            <p>Certificación en Python desde Cero 2023: Aprende a programar con uno de los lenguajes más demandados del mundo. Curso práctico y actualizado.</p>
+                            <p data-i18n="cert_python_description">Certificación en Python desde Cero 2023: Aprende a programar con uno de los lenguajes más demandados del mundo. Curso práctico y actualizado.</p>
                             <div class="certification-meta">
-                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2024</span>
-                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> <span data-i18n="cert_python_date">Noviembre 2024</span></span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> <span data-i18n="cert_python_credential">CERTIFICADO</span></span>
                             </div>
-                            <a href="#" class="certification-link" data-certificate="assets/certificates/certificado-ruta-python.png">Ver certificado <i class="fas fa-certificate"></i></a>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/certificado-ruta-python.png"><span data-i18n="skills_view_certificate">Ver certificado</span> <i class="fas fa-certificate"></i></a>
                         </div>
 
                         
@@ -685,18 +707,17 @@
                         </div>
                         <div class="certification-badge">2024</div>
                         <div class="certification-content">
-                            <h4>JavaScript desde cего
-</h4>
+                            <h4 data-i18n="cert_javascript_title">JavaScript desde cero</h4>
                             <div class="certification-provider">
                                 <img src="assets/img/edteam.png" alt="EDteam">
-                                <span>EDteam</span>
+                                <span data-i18n="cert_javascript_provider">EDteam</span>
                             </div>
-                            <p>Certificación en JavaScript desde Cero: Domina el lenguaje clave del desarrollo web. Aprende de forma práctica a crear sitios interactivos.</p>
+                            <p data-i18n="cert_javascript_description">Certificación en JavaScript desde Cero: Domina el lenguaje clave del desarrollo web. Aprende de forma práctica a crear sitios interactivos.</p>
                             <div class="certification-meta">
-                                <span class="certification-date"><i class="far fa-calendar-alt"></i> Noviembre 2024</span>
-                                <span class="certification-credential"><i class="fas fa-award"></i> CERTIFICADO </span>
+                                <span class="certification-date"><i class="far fa-calendar-alt"></i> <span data-i18n="cert_javascript_date">Noviembre 2024</span></span>
+                                <span class="certification-credential"><i class="fas fa-award"></i> <span data-i18n="cert_javascript_credential">CERTIFICADO</span></span>
                             </div>
-                            <a href="#" class="certification-link" data-certificate="assets/certificates/certificado-ruta-javascript.png">Ver certificado <i class="fas fa-certificate"></i></a>
+                            <a href="#" class="certification-link" data-certificate="assets/certificates/certificado-ruta-javascript.png"><span data-i18n="skills_view_certificate">Ver certificado</span> <i class="fas fa-certificate"></i></a>
                         </div>
                     </div>
         </div>
@@ -709,8 +730,8 @@
         <div class="portfolio-bg-shape portfolio-bg-dots"></div>
         
         <div class="section-header">
-            <span class="section-subtitle">Trabajos seleccionados</span>
-            <h2 class="section-title">Mi <span class="highlight">Portafolio</span></h2>
+            <span class="section-subtitle" data-i18n="portfolio_subtitle">Trabajos seleccionados</span>
+            <h2 class="section-title" data-i18n-html="portfolio_title">Mi <span class="highlight">Portafolio</span></h2>
         </div>
         
         <!-- Grid de proyectos con diseño avanzado -->
@@ -722,24 +743,24 @@
                         <img src="assets/proyectos/NOMINA3.png" alt="Proyecto SVFUPC">
                         <div class="portfolio-overlay">
                             <div class="overlay-content">
-                                <span class="project-category">Desarrollo Web</span>
+                                <span class="project-category" data-i18n="portfolio_category_web">Desarrollo Web</span>
                                 <div class="portfolio-actions">
                                     <a href="javascript:void(0)" class="portfolio-action live-demo" onclick="openProjectModal('svfupc')">
                                         <i class="fas fa-images"></i>
-                                        <span class="action-tooltip">Ver Más</span>
+                                        <span class="action-tooltip" data-i18n="portfolio_view_more">Ver Más</span>
                                     </a>
                                     <a href="https://github.com/JhonJ-G/NominaUPC.git" class="portfolio-action github" target="_blank">
                                         <i class="fab fa-github"></i>
-                                        <span class="action-tooltip">Código</span>
+                                        <span class="action-tooltip" data-i18n="portfolio_code">Código</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio-badge">Destacado</div>
+                        <div class="portfolio-badge" data-i18n="portfolio_featured">Destacado</div>
                     </div>
                     <div class="portfolio-content">
-                        <h3 class="portfolio-title">SVFUPC-SIMULADOR DE VIABILIDAD FINANCIERA PARA UNIVERSIDADES PUBLICAS DE COLOMBIA </h3>
-                        <p class="portfolio-description">Este proyecto tiene como objetivo crear una aplicación web que simule el cálculo de la nómina de docentes universitarios; tanto de planta, como ocasionales, según el Decreto 1279 de 2002 y el Acuerdo 006 de 2018</p>
+                        <h3 class="portfolio-title" data-i18n="project_svfupc_title">SVFUPC-SIMULADOR DE VIABILIDAD FINANCIERA PARA UNIVERSIDADES PUBLICAS DE COLOMBIA</h3>
+                        <p class="portfolio-description" data-i18n="project_svfupc_description">Este proyecto tiene como objetivo crear una aplicación web que simule el cálculo de la nómina de docentes universitarios; tanto de planta, como ocasionales, según el Decreto 1279 de 2002 y el Acuerdo 006 de 2018</p>
                         <div class="portfolio-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -747,7 +768,7 @@
                             
                         </div>
                         <div class="portfolio-footer">
-                            <a href="https://jhonj-g.github.io/NominaU/" class="portfolio-link" target="_blank">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://jhonj-g.github.io/NominaU/" class="portfolio-link" target="_blank"><span data-i18n="portfolio_view_details">Ver detalles</span> <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -760,25 +781,23 @@
                         <img src="assets/proyectos/DOMIBOT1.png" alt="Aplicación de Productividad">
                         <div class="portfolio-overlay">
                             <div class="overlay-content">
-                                <span class="project-category">Programa de Escritorio</span>
+                                <span class="project-category" data-i18n="portfolio_category_app">Programa de Escritorio</span>
                                 <div class="portfolio-actions">
                                     <a href="javascript:void(0)" class="portfolio-action live-demo" onclick="openProjectModal('taskmanager')">
                                         <i class="fas fa-images"></i>
-                                        <span class="action-tooltip">Ver Más</span>
+                                        <span class="action-tooltip" data-i18n="portfolio_view_more">Ver Más</span>
                                     </a>
                                     <a href="#" class="portfolio-action github">
                                         <i class="fab fa-github"></i>
-                                        <span class="action-tooltip">Código</span>
+                                        <span class="action-tooltip" data-i18n="portfolio_code">Código</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="portfolio-content">
-                        <h3 class="portfolio-title">DomiBot: Tu Asistente
- Virtual para Pedidos y 
-Reservas en Restaurantes</h3>
-                        <p class="portfolio-description">Aplicativo de escritorio para restaurantes que automatiza la atención al cliente mediante un asistente virtual de Telegram. Integra módulos para gestionar pedidos, reservas con seguro, promociones, pagos y configuración dinámica del menú. Permite al restaurante definir sus métodos de pago y verificar transferencias desde una única interfaz centralizada y fácil de usar.</p>
+                        <h3 class="portfolio-title" data-i18n="project_domibot_title">DomiBot: Tu Asistente Virtual para Pedidos y Reservas en Restaurantes</h3>
+                        <p class="portfolio-description" data-i18n="project_domibot_description">Aplicativo de escritorio para restaurantes que automatiza la atención al cliente mediante un asistente virtual de Telegram. Integra módulos para gestionar pedidos, reservas con seguro, promociones, pagos y configuración dinámica del menú. Permite al restaurante definir sus métodos de pago y verificar transferencias desde una única interfaz centralizada y fácil de usar.</p>
                         <div class="portfolio-tech">
                             <span class="tech-tag">C#</span>
                             <span class="tech-tag">.NET Framework</span>
@@ -786,7 +805,7 @@ Reservas en Restaurantes</h3>
                             <span class="tech-tag">SQL Server</span>
                         </div>
                         <div class="portfolio-footer">
-                            <a href="#" class="portfolio-link">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="portfolio-link"><span data-i18n="portfolio_view_details">Ver detalles</span> <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -800,32 +819,30 @@ Reservas en Restaurantes</h3>
                         <img src="assets/proyectos/PORTAFOLIO.png" alt="Dashboard Analytics">
                         <div class="portfolio-overlay">
                             <div class="overlay-content">
-                                <span class="project-category">Desarrollo Web</span>
+                                <span class="project-category" data-i18n="portfolio_category_web">Desarrollo Web</span>
                                 <div class="portfolio-actions">
                                     <a href="javascript:void(0)" class="portfolio-action live-demo" onclick="openProjectModal('dashboard')">
                                         <i class="fas fa-images"></i>
-                                        <span class="action-tooltip">Ver Más</span>
+                                        <span class="action-tooltip" data-i18n="portfolio_view_more">Ver Más</span>
                                     </a>
                                     <a href="#" class="portfolio-action github">
                                         <i class="fab fa-github"></i>
-                                        <span class="action-tooltip">Código</span>
+                                        <span class="action-tooltip" data-i18n="portfolio_code">Código</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="portfolio-content">
-                        <h3 class="portfolio-title">Mi Portafolio WEB </h3>
-                        <p class="portfolio-description">Sitio web desarrollado desde cero para mostrar mis proyectos, habilidades y experiencia como desarrollador. Implementado con HTML, CSS y JavaScript, con diseño responsivo y enfoque en rendimiento, accesibilidad y presentación profesional. Funciona como una carta de presentación interactiva.
-
-</p>
+                        <h3 class="portfolio-title" data-i18n="project_portfolio_title">Mi Portafolio WEB</h3>
+                        <p class="portfolio-description" data-i18n="project_portfolio_description">Sitio web desarrollado desde cero para mostrar mis proyectos, habilidades y experiencia como desarrollador. Implementado con HTML, CSS y JavaScript, con diseño responsivo y enfoque en rendimiento, accesibilidad y presentación profesional. Funciona como una carta de presentación interactiva.</p>
                         <div class="portfolio-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
                         </div>
                         <div class="portfolio-footer">
-                            <a href="#" class="portfolio-link">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="portfolio-link"><span data-i18n="portfolio_view_details">Ver detalles</span> <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -856,12 +873,12 @@ Reservas en Restaurantes</h3>
                     <div class="cta-text-content">
                         <span class="cta-badge">
                             <i class="fas fa-star"></i>
-                            Disponible para nuevos proyectos
+                            <span data-i18n="cta_badge">Disponible para nuevos proyectos</span>
                         </span>
-                        <h3 class="cta-title">
+                        <h3 class="cta-title" data-i18n-html="cta_title">
                             ¿Tienes un <span class="highlight">proyecto</span> en mente?
                         </h3>
-                        <p class="cta-description">
+                        <p class="cta-description" data-i18n="cta_description">
                             Estoy disponible para proyectos freelance y colaboraciones. 
                             Convirtamos tu idea en una realidad digital excepcional.
                         </p>
@@ -869,45 +886,45 @@ Reservas en Restaurantes</h3>
                         <div class="cta-features">
                             <div class="cta-feature">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Desarrollo personalizado</span>
+                                <span data-i18n="cta_feature_custom">Desarrollo personalizado</span>
                             </div>
                             <div class="cta-feature">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Diseño moderno y responsivo</span>
+                                <span data-i18n="cta_feature_responsive">Diseño moderno y responsivo</span>
                             </div>
                             <div class="cta-feature">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Entrega rápida y eficiente</span>
+                                <span data-i18n="cta_feature_delivery">Entrega rápida y eficiente</span>
                             </div>
                         </div>
                         
                         <div class="cta-actions">
                             <a href="#contact" class="btn primary-btn cta-main-btn">
-                                <span class="btn-text">Contáctame</span>
+                                <span class="btn-text" data-i18n="cta_btn_contact">Contáctame</span>
                                 <i class="fas fa-paper-plane"></i>
                                 <div class="btn-glow"></div>
                             </a>
                             
                             <a href="https://wa.me/573117312426?text=Hola%20Miguel,%20estoy%20interesado%20en%20tus%20servicios%20de%20desarrollo.%20Me%20gustaría%20conversar%20sobre%20mi%20proyecto." target="_blank" class="btn secondary-btn cta-whatsapp-btn">
                                 <i class="fab fa-whatsapp"></i>
-                                <span>WhatsApp</span>
+                                <span data-i18n="cta_btn_whatsapp">WhatsApp</span>
                             </a>
                         </div>
                         
                         <div class="cta-stats">
                             <div class="stat-item">
                                 <span class="stat-number">10+</span>
-                                <span class="stat-label">Proyectos completados</span>
+                                <span class="stat-label" data-i18n="cta_stats_completed">Proyectos completados</span>
                             </div>
                             <div class="stat-divider"></div>
                             <div class="stat-item">
                                 <span class="stat-number">100%</span>
-                                <span class="stat-label">Clientes satisfechos</span>
+                                <span class="stat-label" data-i18n="cta_stats_satisfied">Clientes satisfechos</span>
                             </div>
                             <div class="stat-divider"></div>
                             <div class="stat-item">
                                 <span class="stat-number">2h</span>
-                                <span class="stat-label">Tiempo de respuesta</span>
+                                <span class="stat-label" data-i18n="cta_stats_response">Tiempo de respuesta</span>
                             </div>
                         </div>
                     </div>
@@ -984,10 +1001,10 @@ Reservas en Restaurantes</h3>
                 </div>
                 <div class="modal-actions">
                     <a id="modal-github-link" href="#" class="btn secondary-btn" target="_blank">
-                        <i class="fab fa-github"></i> Ver Código
+                        <i class="fab fa-github"></i> <span data-i18n="portfolio_code">Ver Código</span>
                     </a>
                     <a id="modal-demo-link" href="#" class="btn primary-btn" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> Ver Demo
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio_view_demo">Ver Demo</span>
                     </a>
                 </div>
             </div>
@@ -1002,8 +1019,8 @@ Reservas en Restaurantes</h3>
         <div class="contact-bg-shape contact-bg-dots"></div>
         
         <div class="section-header">
-            <span class="section-subtitle">Ponte en contacto</span>
-            <h2 class="section-title">Contác<span class="highlight">tame</span></h2>
+            <span class="section-subtitle" data-i18n="contact_subtitle">Trabajemos juntos</span>
+            <h2 class="section-title" data-i18n-html="contact_title">Contác<span class="highlight">tame</span></h2>
         </div>
         
         <div class="contact-container">
@@ -1011,8 +1028,8 @@ Reservas en Restaurantes</h3>
             <div class="contact-info-wrapper" data-aos="fade-right" data-aos-delay="100">
                 <div class="contact-card">
                     <div class="contact-card-header">
-                        <h3>Información de Contacto</h3>
-                        <p>Estoy disponible para nuevos proyectos. Contáctame y conversemos sobre tu idea.</p>
+                        <h3 data-i18n="contact_info_title">Información de Contacto</h3>
+                        <p data-i18n="contact_card_desc">¡Conversemos sobre tu proyecto! Envíame un mensaje y te responderé inmediatamente.</p>
                     </div>
                     
                     <div class="contact-info-items">
@@ -1022,7 +1039,7 @@ Reservas en Restaurantes</h3>
                                 <div class="icon-glow"></div>
                             </div>
                             <div class="info-content">
-                                <h4>Email</h4>
+                                <h4 data-i18n="contact_email">Email</h4>
                                 <p>devmiguelgarcia@gmail.com</p>
                                 <a href="mailto:devmiguelgarcia@gmail.com" class="mail-link">Enviar email <i class="fas fa-paper-plane"></i></a>
                             </div>
@@ -1034,7 +1051,7 @@ Reservas en Restaurantes</h3>
                                 <div class="icon-glow"></div>
                             </div>
                             <div class="info-content">
-                                <h4>WhatsApp</h4>
+                                <h4 data-i18n="contact_whatsapp">WhatsApp</h4>
                                 <p>+57 311 731 2426</p>
                                 <a href="https://wa.me/573117312426" class="phone-link" target="_blank">Contactar <i class="fab fa-whatsapp"></i></a>
                             </div>
@@ -1087,23 +1104,23 @@ Reservas en Restaurantes</h3>
                         <div class="whatsapp-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
-                        <h3>Contacto Directo</h3>
-                        <p>¡Conversemos sobre tu proyecto! Envíame un mensaje y te responderé inmediatamente.</p>
+                        <h3 data-i18n="contact_direct_title">Contacto Directo</h3>
+                        <p data-i18n="contact_direct_description">¡Conversemos sobre tu proyecto! Envíame un mensaje y te responderé inmediatamente.</p>
                     </div>
                     
                     <div class="whatsapp-content">
                         <div class="whatsapp-benefits">
                             <div class="benefit-item">
                                 <i class="fas fa-bolt"></i>
-                                <span>Respuesta inmediata</span>
+                                <span data-i18n="contact_immediate_response">Respuesta inmediata</span>
                             </div>
                             <div class="benefit-item">
                                 <i class="fas fa-comments"></i>
-                                <span>Conversación fluida</span>
+                                <span data-i18n="contact_fluid_conversation">Conversación fluida</span>
                             </div>
                             <div class="benefit-item">
                                 <i class="fas fa-mobile-alt"></i>
-                                <span>Desde cualquier dispositivo</span>
+                                <span data-i18n="contact_any_device">Desde cualquier dispositivo</span>
                             </div>
                         </div>
                         
@@ -1113,7 +1130,7 @@ Reservas en Restaurantes</h3>
                                     <div class="preview-header">
                                         <div class="avatar">MG</div>
                                     </div>
-                                    <div class="preview-message">
+                                    <div class="preview-message" data-i18n="contact_preview_message">
                                         ¡Hola! 👋 Gracias por contactarme. Cuéntame sobre tu proyecto y trabajemos juntos para hacerlo realidad.
                                     </div>
                                 </div>
@@ -1121,12 +1138,12 @@ Reservas en Restaurantes</h3>
                             
                             <a href="https://wa.me/573117312426?text=Hola%20Miguel,%20estoy%20interesado%20en%20tus%20servicios%20de%20desarrollo.%20Me%20gustaría%20conversar%20sobre%20mi%20proyecto." target="_blank" class="btn primary-btn whatsapp-main-btn">
                                 <i class="fab fa-whatsapp"></i>
-                                <span>Abrir WhatsApp</span>
+                                <span data-i18n="contact_open_whatsapp">Abrir WhatsApp</span>
                                 <div class="btn-shine"></div>
                             </a>
                             
                             <div class="alternative-contact">
-                                <span>O también puedes:</span>
+                                <span data-i18n="contact_alternative">O también puedes:</span>
                                 <div class="alternative-buttons">
                                     <a href="mailto:devmiguelgarcia@gmail.com" class="alt-btn">
                                         <i class="fas fa-envelope"></i>
@@ -1143,19 +1160,19 @@ Reservas en Restaurantes</h3>
                 <div class="contact-form-features">
                     <div class="feature-item">
                         <i class="fas fa-clock"></i>
-                        <span>Respuesta inmediata</span>
+                        <span data-i18n="contact_immediate_response">Respuesta inmediata</span>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-shield-alt"></i>
-                        <span>Comunicación segura</span>
+                        <span data-i18n="contact_secure_communication">Comunicación segura</span>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-handshake"></i>
-                        <span>Atención personalizada</span>
+                        <span data-i18n="contact_personalized_attention">Atención personalizada</span>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-lock"></i>
-                        <span>Conexión segura</span>
+                        <span data-i18n="contact_secure_connection">Conexión segura</span>
                     </div>
                 </div>
             </div>
@@ -1164,38 +1181,38 @@ Reservas en Restaurantes</h3>
         <!-- FAQ sección con acordeón -->
         <div class="contact-faq-container" data-aos="fade-up" data-aos-delay="400">
             <div class="faq-header">
-                <h3>Preguntas Frecuentes</h3>
-                <p>Algunas respuestas que podrían ser útiles</p>
+                <h3 data-i18n="contact_faq_title">Preguntas Frecuentes</h3>
+                <p data-i18n="contact_faq_subtitle">Algunas respuestas que podrían ser útiles</p>
             </div>
             
             <div class="faq-accordion">
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h4>¿Cómo es tu proceso de trabajo?</h4>
+                        <h4 data-i18n="contact_faq_process">¿Cómo es tu proceso de trabajo?</h4>
                         <span class="accordion-icon"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="accordion-content">
-                        <p>Mi proceso comienza con una reunión inicial para entender tus necesidades, seguido de una propuesta detallada. Trabajo con metodologías ágiles, entregando avances periódicos y manteniendo comunicación constante durante todo el proyecto.</p>
+                        <p data-i18n="contact_faq_process_answer">Mi proceso comienza con una reunión inicial para entender tus necesidades, seguido de una propuesta detallada. Trabajo con metodologías ágiles, entregando avances periódicos y manteniendo comunicación constante durante todo el proyecto.</p>
                     </div>
                 </div>
                 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h4>¿Cuáles son tus tarifas?</h4>
+                        <h4 data-i18n="contact_faq_rates">¿Cuáles son tus tarifas?</h4>
                         <span class="accordion-icon"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="accordion-content">
-                        <p>Mis tarifas varían según el tipo y alcance del proyecto. Puedo trabajar con presupuestos por proyecto o por hora, adaptándome a tus necesidades. Contáctame para recibir una cotización personalizada.</p>
+                        <p data-i18n="contact_faq_rates_answer">Mis tarifas varían según el tipo y alcance del proyecto. Puedo trabajar con presupuestos por proyecto o por hora, adaptándome a tus necesidades. Contáctame para recibir una cotización personalizada.</p>
                     </div>
                 </div>
                 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h4>¿Cuál es tu tiempo de entrega promedio?</h4>
+                        <h4 data-i18n="contact_faq_delivery">¿Cuál es tu tiempo de entrega promedio?</h4>
                         <span class="accordion-icon"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="accordion-content">
-                        <p>Los tiempos de entrega dependen de la complejidad del proyecto. Un sitio web básico puede estar listo en 2-3 semanas, mientras que proyectos más complejos pueden tomar entre 1-3 meses. Siempre acordamos un cronograma realista al inicio.</p>
+                        <p data-i18n="contact_faq_delivery_answer">Los tiempos de entrega dependen de la complejidad del proyecto. Un sitio web básico puede estar listo en 2-3 semanas, mientras que proyectos más complejos pueden tomar entre 1-3 meses. Siempre acordamos un cronograma realista al inicio.</p>
                     </div>
                 </div>
             </div>
@@ -1217,7 +1234,7 @@ Reservas en Restaurantes</h3>
                 <div class="footer-logo">
                     <span class="highlight">Miguel</span>Dev
                 </div>
-                <p class="footer-tagline">
+                <p class="footer-tagline" data-i18n="footer_tagline">
                     Transformando ideas en experiencias digitales excepcionales
                 </p>
                 <div class="footer-social-main">
@@ -1240,49 +1257,49 @@ Reservas en Restaurantes</h3>
             <div class="footer-main">
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4><i class="fas fa-link"></i> Enlaces Rápidos</h4>
+                        <h4><i class="fas fa-link"></i> <span data-i18n="footer_quick_links">Enlaces Rápidos</span></h4>
                         <ul>
-                            <li><a href="#home"><i class="fas fa-home"></i> Inicio</a></li>
-                            <li><a href="#about"><i class="fas fa-user"></i> Sobre Mí</a></li>
-                            <li><a href="#skills"><i class="fas fa-code"></i> Habilidades</a></li>
-                            <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Proyectos</a></li>
-                            <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+                            <li><a href="#home"><i class="fas fa-home"></i> <span data-i18n="nav_home">Inicio</span></a></li>
+                            <li><a href="#about"><i class="fas fa-user"></i> <span data-i18n="nav_about">Sobre Mí</span></a></li>
+                            <li><a href="#skills"><i class="fas fa-code"></i> <span data-i18n="nav_skills">Habilidades</span></a></li>
+                            <li><a href="#portfolio"><i class="fas fa-briefcase"></i> <span data-i18n="nav_portfolio">Proyectos</span></a></li>
+                            <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-i18n="nav_contact">Contacto</span></a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
-                        <h4><i class="fas fa-cogs"></i> Servicios</h4>
+                        <h4><i class="fas fa-cogs"></i> <span data-i18n="footer_services">Servicios</span></h4>
                         <ul>
-                            <li><i class="fas fa-laptop-code"></i> Desarrollo Web</li>
-                            <li><i class="fas fa-mobile-alt"></i> Aplicaciones Móviles</li>
-                            <li><i class="fas fa-paint-brush"></i> Diseño UI/UX</li>
-                            <li><i class="fas fa-server"></i> Backend Development</li>
-                            <li><i class="fas fa-search"></i> SEO & Optimización</li>
+                            <li><i class="fas fa-laptop-code"></i> <span data-i18n="footer_web_development">Desarrollo Web</span></li>
+                            <li><i class="fas fa-mobile-alt"></i> <span data-i18n="footer_mobile_apps">Aplicaciones Móviles</span></li>
+                            <li><i class="fas fa-paint-brush"></i> <span data-i18n="footer_ui_design">Diseño UI/UX</span></li>
+                            <li><i class="fas fa-server"></i> <span data-i18n="footer_backend">Backend Development</span></li>
+                            <li><i class="fas fa-search"></i> <span data-i18n="footer_seo">SEO & Optimización</span></li>
                         </ul>
                     </div>
                     
                     <div class="footer-column">
-                        <h4><i class="fas fa-address-card"></i> Contacto</h4>
+                        <h4><i class="fas fa-address-card"></i> <span data-i18n="footer_contact_info">Contacto</span></h4>
                         <div class="footer-contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <div>
-                                    <span class="contact-label">Email</span>
+                                    <span class="contact-label" data-i18n="contact_email">Email</span>
                                     <a href="mailto:devmiguelgarcia@gmail.com">devmiguelgarcia@gmail.com</a>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <div>
-                                    <span class="contact-label">Teléfono</span>
+                                    <span class="contact-label" data-i18n="footer_phone">Teléfono</span>
                                     <a href="tel:+573117312426">+57 311 731 2426</a>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
-                                    <span class="contact-label">Ubicación</span>
-                                    <span>Colombia</span>
+                                    <span class="contact-label" data-i18n="contact_location">Ubicación</span>
+                                    <span data-i18n="footer_location_name">Colombia</span>
                                 </div>
                             </div>
                         </div>
@@ -1297,24 +1314,24 @@ Reservas en Restaurantes</h3>
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <div class="footer-copyright">
-                    <p>&copy; 2025 <span class="highlight">Miguel Garcia</span>. Todos los derechos reservados.</p>
+                    <p data-i18n="footer_copyright">&copy; 2025 <span class="highlight">Miguel Garcia</span>. Todos los derechos reservados.</p>
                     <p class="footer-made-with">
-                        Hecho con <i class="fas fa-heart"></i> usando HTML, CSS & JavaScript
+                        <span data-i18n="footer_made_with">Hecho con</span> <i class="fas fa-heart"></i> <span data-i18n="footer_using_tech">usando HTML, CSS & JavaScript</span>
                     </p>
                 </div>
                 
                 <div class="footer-extra-links">
-                    <a href="#" class="footer-extra-link">Política de Privacidad</a>
+                    <a href="#" class="footer-extra-link" data-i18n="footer_privacy_policy">Política de Privacidad</a>
                     <span class="divider">•</span>
-                    <a href="#" class="footer-extra-link">Términos de Uso</a>
+                    <a href="#" class="footer-extra-link" data-i18n="footer_terms_of_use">Términos de Uso</a>
                     <span class="divider">•</span>
-                    <a href="#" class="footer-extra-link">Cookies</a>
+                    <a href="#" class="footer-extra-link" data-i18n="footer_cookies">Cookies</a>
                 </div>
                 
                 <div class="footer-status">
                     <span class="status-indicator">
                         <span class="status-dot available"></span>
-                        Disponible para proyectos
+                        <span data-i18n="footer_available_for_projects">Disponible para proyectos</span>
                     </span>
                 </div>
             </div>
@@ -1324,6 +1341,7 @@ Reservas en Restaurantes</h3>
         <a href="#" class="back-to-top">
             <i class="fas fa-arrow-up"></i>
             <div class="back-to-top-glow"></div>
+            <span class="back-to-top-text" data-i18n="footer_back_to_top">Volver arriba</span>
         </a>
     </footer>
 
@@ -1335,10 +1353,10 @@ Reservas en Restaurantes</h3>
                 <img id="certificateImage" src="" alt="Certificado">
                 <div class="modal-controls">
                     <button id="downloadCertificate" class="modal-btn download-btn">
-                        <i class="fas fa-download"></i> Descargar
+                        <i class="fas fa-download"></i> <span data-i18n="modal_download">Descargar</span>
                     </button>
                     <button id="fullscreenCertificate" class="modal-btn fullscreen-btn">
-                        <i class="fas fa-expand"></i> Pantalla completa
+                        <i class="fas fa-expand"></i> <span data-i18n="modal_fullscreen">Pantalla completa</span>
                     </button>
                 </div>
             </div>
@@ -1350,15 +1368,15 @@ Reservas en Restaurantes</h3>
     <div id="cvModal" class="cv-modal">
         <div class="cv-modal-content">
             <div class="cv-modal-header">
-                <h3>Currículum Vitae - Miguel Garcia</h3>
+                <h3 data-i18n="modal_cv_title">Currículum Vitae - Miguel Garcia</h3>
                 <div class="cv-modal-controls">
                     <button onclick="downloadCV()" class="cv-btn download-btn" title="Descargar CV">
                         <i class="fas fa-download"></i>
-                        <span class="btn-text">Descargar</span>
+                        <span class="btn-text" data-i18n="modal_download">Descargar</span>
                     </button>
                     <button onclick="openCVFullscreen()" class="cv-btn fullscreen-btn" title="Ver en pantalla completa">
                         <i class="fas fa-expand"></i>
-                        <span class="btn-text">Pantalla completa</span>
+                        <span class="btn-text" data-i18n="modal_fullscreen">Pantalla completa</span>
                     </button>
                     <button onclick="closeCVModal()" class="cv-btn close-btn" title="Cerrar">
                         <i class="fas fa-times"></i>
@@ -1369,7 +1387,7 @@ Reservas en Restaurantes</h3>
             <div class="cv-preview-container">
                 <div class="cv-loading">
                     <div class="loading-spinner"></div>
-                    <p>Cargando CV...</p>
+                    <p data-i18n="modal_loading">Cargando CV...</p>
                 </div>
                 <iframe id="cvPreview" 
                         src="" 
@@ -1379,10 +1397,10 @@ Reservas en Restaurantes</h3>
                 <div class="cv-fallback">
                     <div class="fallback-content">
                         <i class="fas fa-file-pdf"></i>
-                        <h4>Vista previa no disponible</h4>
-                        <p>Tu navegador no soporta la vista previa de PDF. Puedes descargar el archivo directamente.</p>
+                        <h4 data-i18n="modal_preview_not_available">Vista previa no disponible</h4>
+                        <p data-i18n="modal_browser_not_support">Tu navegador no soporta la vista previa de PDF. Puedes descargar el archivo directamente.</p>
                         <button onclick="downloadCV()" class="btn primary-btn">
-                            <i class="fas fa-download"></i> Descargar CV
+                            <i class="fas fa-download"></i> <span data-i18n="modal_download_cv">Descargar CV</span>
                         </button>
                     </div>
                 </div>
@@ -1391,11 +1409,11 @@ Reservas en Restaurantes</h3>
             <div class="cv-mobile-actions">
                 <button onclick="downloadCV()" class="cv-mobile-btn download">
                     <i class="fas fa-download"></i>
-                    <span>Descargar</span>
+                    <span data-i18n="modal_download">Descargar</span>
                 </button>
                 <button onclick="openCVFullscreen()" class="cv-mobile-btn fullscreen">
                     <i class="fas fa-expand"></i>
-                    <span>Pantalla completa</span>
+                    <span data-i18n="modal_fullscreen">Pantalla completa</span>
                 </button>
             </div>
         </div>
@@ -1403,6 +1421,7 @@ Reservas en Restaurantes</h3>
     </div>
 
     <!-- Scripts -->
+    <script src="js/language.js"></script>
     <script src="js/main.js"></script>
     <script src="js/home.js"></script>
     <script src="js/about.js"></script>

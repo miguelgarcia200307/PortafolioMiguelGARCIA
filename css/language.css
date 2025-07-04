@@ -1,0 +1,274 @@
+/* Estilos para el selector de idiomas */
+.language-selector {
+    position: relative;
+    z-index: 1001;
+}
+
+.language-toggle {
+    position: relative;
+    user-select: none;
+}
+
+.current-lang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--surface);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+    justify-content: space-between;
+}
+
+.current-lang:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.language-toggle.active .current-lang {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.flag-icon {
+    width: 20px;
+    height: 15px;
+    border-radius: 2px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.flag-es {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="%23AA151B"/><rect width="3" height="1" y="0.5" fill="%23F1BF00"/></svg>');
+}
+
+.flag-en {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><rect width="60" height="30" fill="%23012169"/><g stroke="%23FFF" stroke-width="6"><path d="M0,0 L60,30 M60,0 L0,30"/></g><g stroke="%23C8102E" stroke-width="4"><path d="M0,0 L60,30 M60,0 L0,30"/></g><g stroke="%23FFF" stroke-width="10"><path d="M30,0 L30,30 M0,15 L60,15"/></g><g stroke="%23C8102E" stroke-width="6"><path d="M30,0 L30,30 M0,15 L60,15"/></g></svg>');
+}
+
+.flag-pt {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="%23009639"/><rect width="1.2" height="2" fill="%23FEDF00"/></svg>');
+}
+
+.lang-text {
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.current-lang i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.language-toggle.active .current-lang i {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    min-width: 140px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1002;
+}
+
+.language-toggle.active .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border-radius: 6px;
+    margin: 4px;
+}
+
+.lang-option:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.lang-option:first-child {
+    margin-top: 6px;
+}
+
+.lang-option:last-child {
+    margin-bottom: 6px;
+}
+
+/* Animaciones para el cambio de idioma */
+.language-transition {
+    animation: fadeInOut 0.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .language-selector {
+        order: -1;
+        margin-right: 15px;
+    }
+    
+    .current-lang {
+        padding: 6px 10px;
+        min-width: 70px;
+    }
+    
+    .lang-text {
+        font-size: 0.8rem;
+    }
+    
+    .flag-icon {
+        width: 18px;
+        height: 13px;
+    }
+    
+    .language-dropdown {
+        right: -5px;
+        min-width: 120px;
+    }
+}
+
+/* Compatibilidad con modo oscuro */
+@media (prefers-color-scheme: dark) {
+    .current-lang {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+    }
+    
+    .language-dropdown {
+        background: rgba(45, 52, 54, 0.95);
+        border-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    
+    .lang-option:hover {
+        background: var(--primary-color);
+    }
+}
+
+/* Efectos adicionales */
+.language-selector::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.language-toggle.active::before {
+    width: 100%;
+    height: 100%;
+}
+
+/* Indicador de carga para cambio de idioma */
+.language-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.language-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Ajustes para el header scrolled */
+header.scrolled .current-lang {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Micro-animaciones para mejor UX */
+.lang-option {
+    position: relative;
+    overflow: hidden;
+}
+
+.lang-option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.lang-option:hover::before {
+    left: 100%;
+}
+
+/* Accesibilidad */
+.language-selector:focus-within .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Soporte para usuarios que prefieren movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .language-toggle,
+    .language-dropdown,
+    .lang-option,
+    .current-lang i {
+        transition: none;
+    }
+    
+    .language-loading::after {
+        animation: none;
+    }
+}
